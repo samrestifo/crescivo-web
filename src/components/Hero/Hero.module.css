@@ -32,7 +32,7 @@
     background-image: url('/images/hero-mountain-mobile.webp');
     background-size: cover;
     background-position: center 35%;
-    height: 70vh;
+    height: 50svh;
     bottom: auto;
     transform: none !important; /* disable parallax on mobile/tablet */
   }
@@ -56,7 +56,7 @@
    mountain and figure read, then darkens from ~60% down for the text/CTAs */
 @media (max-width: 960px) {
   .overlayLeft {
-    height: 70vh;
+    height: 50svh;
     bottom: auto;
     background: linear-gradient(
       to bottom,
@@ -282,7 +282,7 @@
   .main {
     position: relative;
     z-index: 2;
-    min-height: calc(70vh - 64px);
+    min-height: calc(50svh - 64px);
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -309,13 +309,13 @@
     background: var(--ink);
   }
   .capRich {
-    padding: 28px 16px;
+    padding: 16px 14px;
     background: var(--ink);
     border: 1px solid rgba(255, 255, 255, 0.07);
-    gap: 12px;
+    gap: 8px;
   }
-  .capRichIcon { width: 36px; height: 36px; color: var(--champ); }
-  .capRichIcon svg { width: 36px; height: 36px; }
+  .capRichIcon { width: 30px; height: 30px; color: var(--champ); }
+  .capRichIcon svg { width: 30px; height: 30px; }
   .capRichTitle {
     font-size: 9px;
     letter-spacing: 0.32em;
@@ -336,7 +336,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 12px 24px;
+    padding: 9px 24px;
     font-size: 8px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -349,7 +349,7 @@
     background: var(--champ);
     color: var(--ink);
     text-align: center;
-    padding: 18px 24px;
+    padding: 14px 24px;
     font-family: var(--font-sans);
     font-size: 11px;
     letter-spacing: 0.14em;
@@ -361,7 +361,7 @@
     text-align: center;
     font-size: 11px;
     color: rgba(248, 250, 251, 0.3);
-    padding: 10px 24px 20px;
+    padding: 8px 24px 14px;
     background: var(--ink);
   }
 }
