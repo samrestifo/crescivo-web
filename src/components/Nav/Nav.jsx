@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import styles from './Nav.module.css'
 
 const LINKS = [
-  { href: '#services',   label: 'Services'   },
-  { href: '#diagnostic', label: 'Diagnostic' },
-  { href: '#results',    label: 'Results'    },
-  { href: '#about',      label: 'About'      },
+  { href: '#services',   label: 'What We Do'      },
+  { href: '#diagnostic', label: 'The Entry Point' },
+  { href: '#results',    label: 'Case Study'      },
+  { href: '#about-team', label: 'Who We Are'      },
 ]
 
 function Wordmark() {

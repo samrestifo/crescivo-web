@@ -9,7 +9,7 @@ const PROBLEMS = [
 
 export default function Problem() {
   return (
-    <section className={`sec-alt ${styles.section}`} id="about">
+    <section className={`sec-alt ${styles.section}`} id="problem">
       <div className="sec-inner">
         <div className="eyebrow">The Problem We Solve</div>
         <h2 className="sec-h2">
