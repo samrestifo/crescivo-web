@@ -42,7 +42,7 @@
     background-position: center 58%;
     background-repeat: no-repeat;
     opacity: 0.62;                /* slightly transparent / dimmed */
-    transform: translateY(-40%) !important;   /* shift image up; also disables parallax */
+    transform: translateY(-30%) !important;   /* shift image up; also disables parallax */
     z-index: 0;
   }
 }
