@@ -16,10 +16,7 @@ export default function Diagnostic() {
           <div className="reveal">
             <div className="eyebrow">The Entry Point</div>
             <h2 className="sec-h2">The Growth<br /><em>Diagnostic</em></h2>
-            <div className={styles.price}>
-              <span className={styles.priceN}>AUD $8–12K</span>
-              <span className={styles.priceL}>Fixed fee · 3 weeks</span>
-            </div>
+            <div className={styles.feeLabel}>Fixed fee · 3 weeks</div>
             <p className="sec-desc" style={{marginBottom:32}}>
               We don't commit to KPIs before we understand the business. The diagnostic is the structured entry point — 13 deliverables, four tracks, full commercial picture. KPI commitments come after, not before.
             </p>
