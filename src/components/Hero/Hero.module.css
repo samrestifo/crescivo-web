@@ -238,7 +238,7 @@
   font-size: 9px;
   letter-spacing: 0.38em;
   text-transform: uppercase;
-  color: rgba(248, 250, 251, 0.32);
+  color: rgba(248, 250, 251, 0.5);
   display: flex;
   align-items: center;
   gap: 18px;
@@ -248,10 +248,10 @@
   display: block;
   width: 1px;
   height: 14px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(248, 250, 251, 0.3);
 }
 
-.accent { color: var(--champ); }
+.accent { color: rgba(248, 250, 251, 0.5); }
 
 .actions {
   display: flex;
@@ -310,7 +310,7 @@
     font-size: 9px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: rgba(248, 250, 251, 0.4);
+    color: rgba(248, 250, 251, 0.5);
   }
   .mobileBtn {
     display: block;
