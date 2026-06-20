@@ -21,23 +21,29 @@
    The hero stops being a fixed-height flex column so the .bottom strip can
    render in normal flow under the image zone instead of inside it. */
 @media (max-width: 960px) {
+  /* Hero = full-screen stage. The image is a dimmed full-bleed layer that
+     stays visible BEHIND the title, body and cards (no top-image / dark-text
+     split). All content sits above it via z-index. */
   .hero {
     display: block;
-    height: auto;
-    min-height: 0;
-    overflow: visible;
-    background: var(--ink);
-  }
-  /* Image is a fixed-height in-flow box — figure + mountain framed by
-     background-position; headline and tiles stack normally below it. */
-  .bg {
     position: relative;
+    height: auto;
+    min-height: 100svh;
+    overflow: hidden;
+    background: #050b12;
+  }
+  .bg {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: 42svh;
+    height: 100%;
     background-image: url('/images/hero-mountain-mobile.webp');
     background-size: cover;
-    background-position: center 52%;
-    transform: none !important; /* disable parallax on mobile/tablet */
+    background-position: center 35%;
+    background-repeat: no-repeat;
+    opacity: 0.68;                /* slightly transparent / dimmed */
+    transform: none !important;   /* disable parallax on mobile/tablet */
+    z-index: 0;
   }
 }
 
@@ -59,10 +65,24 @@
    mountain and figure read, then darkens from ~60% down for the text/CTAs */
 /* On mobile the image shows clean; only the top nav-contrast overlay stays. */
 @media (max-width: 960px) {
-  .overlayLeft,
-  .overlayMid { display: none; }
-  /* Keep the top overlay only over the image, for nav contrast */
-  .overlayTop { height: 42svh; bottom: auto; }
+  /* One gradient over the dimmed image: readable top (logo), clearer middle
+     (figure/mountain), dark bottom (title / body / cards readability). */
+  .overlayLeft {
+    display: block;
+    inset: 0;
+    height: auto;
+    z-index: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(5,11,18,0.45) 0%,
+      rgba(5,11,18,0.15) 26%,
+      rgba(5,11,18,0.40) 52%,
+      rgba(5,11,18,0.82) 78%,
+      rgba(5,11,18,0.95) 100%
+    );
+  }
+  .overlayMid,
+  .overlayTop { display: none; }
 }
 
 .overlayMid {
@@ -273,27 +293,29 @@
 
 /* ── Mobile ── */
 @media (max-width: 960px) {
-  /* No spacer: the fixed nav floats over the top of the image */
+  /* Fixed nav floats over the top of the image */
   .navSpacer { display: none; }
 
-  /* Headline + tagline: a dark strip BELOW the image, not over the figure */
+  /* Headline sits OVER the image, pushed down so the figure shows above it.
+     Transparent background so the image continues behind the text. */
   .main {
     position: relative;
     z-index: 2;
     max-width: 100%;
-    background: var(--ink);
-    padding: 22px 24px 20px;
+    background: transparent;
+    margin-top: clamp(120px, 22vh, 210px);
+    padding: 0 22px;
   }
   .h1 { font-size: 28px; margin-bottom: 0; }
-  .divider { margin: 12px 0 14px; }
-  .sub { display: block; font-size: 13px; max-width: 100%; line-height: 1.7; }
+  .divider { margin: 12px 0; }
+  .sub { display: block; font-size: 13px; max-width: 100%; line-height: 1.6; margin-bottom: 10px; }
 
-  /* Tiles + CTA: fixed block pinned to the bottom of the viewport */
+  /* Cards + CTA flow directly below, still over the image — no hard break */
   .bottom {
     position: relative;
     z-index: 2;
-    flex-shrink: 0;
-    background: var(--ink);
+    background: transparent;
+    border-top: none;
     width: 100%;
   }
 
@@ -303,16 +325,20 @@
   .capsMobile {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: var(--ink);
+    gap: 0;
+    background: transparent;
+    margin-top: 16px;
+    padding: 0 22px;
   }
+  /* Translucent cards so the image stays visible behind them */
   .capRich {
-    padding: 20px 16px;
-    background: var(--ink);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    gap: 9px;
+    padding: 18px 16px;
+    background: rgba(5, 11, 18, 0.38);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 8px;
   }
-  .capRichIcon { width: 32px; height: 32px; color: var(--champ); }
-  .capRichIcon svg { width: 32px; height: 32px; }
+  .capRichIcon { width: 30px; height: 30px; color: var(--champ); }
+  .capRichIcon svg { width: 30px; height: 30px; }
   .capRichTitle {
     font-size: 9px;
     letter-spacing: 0.32em;
@@ -327,18 +353,17 @@
   }
   .capRichDesc { display: none; }
 
-  .mobileCta { display: block; background: var(--ink); }
+  .mobileCta { display: block; background: transparent; padding: 0 22px 22px; }
   .mobileTagline {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px 10px;
-    padding: 10px 24px;
+    padding: 14px 0 0;
     font-size: 8px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: rgba(248, 250, 251, 0.4);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    color: rgba(248, 250, 251, 0.45);
     flex-wrap: wrap;
   }
   .mobileCtaBtn {
@@ -347,6 +372,7 @@
     background: var(--champ);
     color: var(--ink);
     text-align: center;
+    margin-top: 16px;
     padding: 15px 24px;
     font-family: var(--font-sans);
     font-size: 11px;
@@ -358,8 +384,8 @@
   .mobileCtaMicro {
     text-align: center;
     font-size: 11px;
-    color: rgba(248, 250, 251, 0.3);
-    padding: 9px 24px 16px;
-    background: var(--ink);
+    color: rgba(248, 250, 251, 0.5);
+    padding: 10px 0 0;
+    background: transparent;
   }
 }
