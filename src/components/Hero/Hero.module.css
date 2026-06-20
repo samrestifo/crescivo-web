@@ -29,14 +29,16 @@
     overflow: hidden;
     background: var(--ink);
   }
-  /* Full-bleed image; the opaque tiles/CTA below cover its lower portion */
+  /* Image is its own in-flow box (flex:1) so it has a real height and
+     background-position frames the figure + mountain deterministically. */
   .bg {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
     background-image: url('/images/hero-mountain-mobile.webp');
     background-size: cover;
-    background-position: center 50%;
-    inset: 0;
-    height: auto;
-    bottom: 0;
+    background-position: center 52%;
     transform: none !important; /* disable parallax on mobile/tablet */
   }
 }
@@ -57,19 +59,10 @@
 
 /* On mobile: vertical gradient that stays clear over the top half so the
    mountain and figure read, then darkens from ~60% down for the text/CTAs */
+/* On mobile the image shows clean; only the top nav-contrast overlay stays. */
 @media (max-width: 960px) {
-  .overlayLeft {
-    inset: 0;
-    height: auto;
-    background: linear-gradient(
-      to bottom,
-      rgba(10,15,24,0.15) 0%,
-      rgba(10,15,24,0.1)  30%,
-      rgba(10,15,24,0.4)  50%,
-      rgba(10,15,24,0.88) 64%,
-      var(--ink)          74%
-    );
-  }
+  .overlayLeft,
+  .overlayMid { display: none; }
 }
 
 .overlayMid {
@@ -279,23 +272,21 @@
 
 /* ── Mobile ── */
 @media (max-width: 960px) {
-  .navSpacer { height: 64px; flex-shrink: 0; }
+  /* No spacer: the fixed nav floats over the top of the image */
+  .navSpacer { display: none; }
 
-  /* Headline pinned to the bottom of the 70vh image zone */
-  /* Image zone grows to fill all space above the fixed tiles/CTA block */
+  /* Headline is a compact dark strip BELOW the image, not over the figure */
   .main {
     position: relative;
     z-index: 2;
-    flex: 1 1 auto;
-    min-height: 0;
+    flex-shrink: 0;
     max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 24px 28px;
+    background: var(--ink);
+    padding: 22px 24px 18px;
   }
-  .h1 { font-size: 36px; }
-  .sub { font-size: 13px; max-width: 100%; }
+  .h1 { font-size: 30px; margin-bottom: 0; }
+  .divider { margin: 12px 0 0; }
+  .sub { display: none; }
 
   /* Tiles + CTA: fixed block pinned to the bottom of the viewport */
   .bottom {
