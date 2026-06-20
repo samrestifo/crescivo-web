@@ -3,7 +3,7 @@ export default function FullImage() {
   return (
     <div className={`${styles.wrap} reveal`}>
       <img
-        src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&fit=crop"
+        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80&fit=crop&crop=center"
         alt=""
         loading="lazy"
         aria-hidden="true"
