@@ -22,18 +22,21 @@
    render in normal flow under the image zone instead of inside it. */
 @media (max-width: 960px) {
   .hero {
-    display: block;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
     min-height: 0;
-    overflow: visible;
+    overflow: hidden;
     background: var(--ink);
   }
+  /* Full-bleed image; the opaque tiles/CTA below cover its lower portion */
   .bg {
     background-image: url('/images/hero-mountain-mobile.webp');
     background-size: cover;
-    background-position: center 35%;
-    height: 50svh;
-    bottom: auto;
+    background-position: center 42%;
+    inset: 0;
+    height: auto;
+    bottom: 0;
     transform: none !important; /* disable parallax on mobile/tablet */
   }
 }
@@ -56,15 +59,15 @@
    mountain and figure read, then darkens from ~60% down for the text/CTAs */
 @media (max-width: 960px) {
   .overlayLeft {
-    height: 50svh;
-    bottom: auto;
+    inset: 0;
+    height: auto;
     background: linear-gradient(
       to bottom,
-      rgba(10,15,24,0.2)  0%,
+      rgba(10,15,24,0.15) 0%,
       rgba(10,15,24,0.1)  30%,
-      rgba(10,15,24,0.55) 62%,
-      rgba(10,15,24,0.92) 80%,
-      rgba(10,15,24,1)    100%
+      rgba(10,15,24,0.4)  50%,
+      rgba(10,15,24,0.88) 64%,
+      var(--ink)          74%
     );
   }
 }
@@ -279,23 +282,26 @@
   .navSpacer { height: 64px; flex-shrink: 0; }
 
   /* Headline pinned to the bottom of the 70vh image zone */
+  /* Image zone grows to fill all space above the fixed tiles/CTA block */
   .main {
     position: relative;
     z-index: 2;
-    min-height: calc(50svh - 64px);
+    flex: 1 1 auto;
+    min-height: 0;
     max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 0 24px 32px;
+    padding: 0 24px 28px;
   }
   .h1 { font-size: 36px; }
   .sub { font-size: 13px; max-width: 100%; }
 
-  /* Tiles + CTA flow BELOW the image zone, on solid ink */
+  /* Tiles + CTA: fixed block pinned to the bottom of the viewport */
   .bottom {
     position: relative;
     z-index: 2;
+    flex-shrink: 0;
     background: var(--ink);
     width: 100%;
   }
@@ -309,13 +315,13 @@
     background: var(--ink);
   }
   .capRich {
-    padding: 16px 14px;
+    padding: 20px 16px;
     background: var(--ink);
     border: 1px solid rgba(255, 255, 255, 0.07);
-    gap: 8px;
+    gap: 9px;
   }
-  .capRichIcon { width: 30px; height: 30px; color: var(--champ); }
-  .capRichIcon svg { width: 30px; height: 30px; }
+  .capRichIcon { width: 32px; height: 32px; color: var(--champ); }
+  .capRichIcon svg { width: 32px; height: 32px; }
   .capRichTitle {
     font-size: 9px;
     letter-spacing: 0.32em;
@@ -336,7 +342,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 9px 24px;
+    padding: 10px 24px;
     font-size: 8px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -349,7 +355,7 @@
     background: var(--champ);
     color: var(--ink);
     text-align: center;
-    padding: 14px 24px;
+    padding: 15px 24px;
     font-family: var(--font-sans);
     font-size: 11px;
     letter-spacing: 0.14em;
@@ -361,7 +367,7 @@
     text-align: center;
     font-size: 11px;
     color: rgba(248, 250, 251, 0.3);
-    padding: 8px 24px 14px;
+    padding: 9px 24px 16px;
     background: var(--ink);
   }
 }
