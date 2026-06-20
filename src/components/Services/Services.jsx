@@ -2,19 +2,19 @@ import styles from './Services.module.css'
 
 const SERVICES = [
   {
-    n: '01', eye: 'Growth', title: 'Market, ICP & Positioning',
-    body: 'Sharpen who you sell to, why you win, and how you articulate it. Build commercial architecture before scaling spend.',
-    tags: ['ICP Rationalisation','Positioning','TAM Analysis','GTM Blueprint'],
+    n: '01', eye: 'Architecture', title: 'ICP, Positioning & Commercial Design',
+    body: 'Clarify who you serve, why you win, how you position and where the next stage of growth should come from.',
+    tags: ['ICP Clarity','Positioning','GTM Design','Commercial Model'],
   },
   {
-    n: '02', eye: 'Sales Execution', title: 'Pipeline, Process & People',
-    body: 'Replace founder instinct with structured, repeatable sales motion. Stage gates, coaching cadences, quota architecture, and forecast discipline.',
-    tags: ['Pipeline Architecture','Stage Gates','Sales Coaching','Quota Design'],
+    n: '02', eye: 'Operations & Leadership', title: 'Revenue Operations & Leadership',
+    body: 'Install the operating cadence, pipeline governance, dashboards and executive visibility for predictable growth — and build the leadership muscle that lets the team operate without the founder in every decision.',
+    tags: ['Operating Cadence','Pipeline Governance','Leadership Rhythm','Autonomy'],
   },
   {
-    n: '03', eye: 'Channel Excellence', title: 'Ecosystem, Enablement & Co-sell',
-    body: 'Activate the partners who multiply your reach without multiplying headcount. Incentive structures, co-sell motions, and enablement that actually gets used.',
-    tags: ['Partner Activation','Co-sell Motion','Enablement','Incentive Design'],
+    n: '03', eye: 'Ecosystem', title: 'Partners, Alliances & Strategic Influence',
+    body: 'Build leverage through the relationships, channels and co-sell motions that multiply reach without multiplying headcount.',
+    tags: ['Partner Motion','Co-sell','Alliance Strategy','Ecosystem Map'],
   },
 ]
 
@@ -22,10 +22,10 @@ export default function Services() {
   return (
     <section id="services">
       <div className="sec-inner" style={{paddingBottom:32}}>
-        <div className="eyebrow">What We Do</div>
-        <h2 className="sec-h2">Three service pillars.<br /><em>One growth engine.</em></h2>
+        <div className="eyebrow">Revenue Architecture™</div>
+        <h2 className="sec-h2">One operating system.<br /><em>Four growth levers.</em></h2>
         <p className="sec-desc" style={{marginBottom:0}}>
-          Each pillar is a standalone engagement or part of The Cadenza — our embedded retainer. We scope to where the constraint is.
+          Everything we build answers one question: what has to exist for this business to scale beyond the founder?
         </p>
       </div>
       <div className={styles.grid}>

@@ -1,22 +1,22 @@
 const FEATURES = [
   'Embedded execution, not advisory deliverables',
   'Weekly operating cadence with your leadership team',
-  'Monthly board-ready reporting and KPI dashboard',
-  'Channel partner activation and governance',
-  'Equity and success fee structures available',
+  'Monthly board-ready revenue reporting',
+  'Pipeline, partner and leadership governance',
+  'Designed to create founder autonomy over time',
 ]
 
 export default function Cadenza() {
   return (
     <div className="img-split" id="cadenza">
       <div className="txt-panel txt-panel-dark" style={{padding:'72px'}}>
-        <div className="eyebrow">The Embedded Retainer</div>
+        <div className="eyebrow">Embedded Execution</div>
         <blockquote style={{fontFamily:'var(--font-serif)',fontStyle:'italic',fontSize:'clamp(22px,2.8vw,38px)',color:'var(--ivory)',lineHeight:1.4,borderLeft:'3px solid var(--champ)',paddingLeft:32,marginBottom:28}}>
-          The cadenza is the part of the performance where the soloist takes over.<br />
-          <em style={{color:'var(--champ-l)'}}>That's Crescivo.</em>
+          The founder built the business.<br />
+          <em style={{color:'var(--champ-l)'}}>Now the business needs to scale beyond the founder.</em>
         </blockquote>
         <p style={{fontSize:14,color:'var(--muted)',lineHeight:1.85,marginBottom:28}}>
-          The Cadenza is our embedded retainer — operating as your fractional GTM, Sales, and Channel leadership across all three service pillars. We're in the business, not beside it.
+          Crescivo embeds alongside the leadership team to turn Revenue Architecture™ into operating rhythm. We work inside the business — building the cadence, systems and capability required for repeatable growth.
         </p>
         <ul style={{listStyle:'none',display:'flex',flexDirection:'column',gap:10,marginBottom:36}}>
           {FEATURES.map(f => (
@@ -25,7 +25,7 @@ export default function Cadenza() {
             </li>
           ))}
         </ul>
-        <a href="#contact" className="btn-primary">Discuss the Cadenza</a>
+        <a href="#contact" className="btn-primary">Discuss Embedded Execution</a>
       </div>
       <div className="img-panel">
         <img

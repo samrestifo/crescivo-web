@@ -16,15 +16,15 @@ export default function ImageSplit() {
       <div className="txt-panel txt-panel-slate">
         <div className="eyebrow" style={{color:'var(--teal-l)'}}>What We Build</div>
         <h2 className="sec-h2" style={{fontSize:'clamp(22px,2.8vw,38px)',marginBottom:18}}>
-          The execution layer your business is missing.
+          The commercial architecture your scale-up is missing.
         </h2>
         <p style={{fontSize:14,color:'var(--muted)',lineHeight:1.85,marginBottom:24}}>
-          Most scale-up GTM problems don't need more strategy. They need someone to make the strategy real — inside the business, accountable for the outcomes.
+          Crescivo sits between the founder and the market. We design the revenue architecture, activate the operating cadence and build the ecosystem required for repeatable enterprise growth.
         </p>
         <p style={{fontSize:14,color:'var(--muted)',lineHeight:1.85,marginBottom:36}}>
-          Crescivo sits between the founders and the market. We build the motion, activate the ecosystem, and hand over a team that can run it independently.
+          We don't replace founders. We multiply them — then build the system that lets the company grow without depending on them.
         </p>
-        <a href="#services" className="btn-primary">See Our Services</a>
+        <a href="#services" className="btn-primary">Explore Revenue Architecture</a>
       </div>
     </div>
   )

@@ -13,9 +13,9 @@ export default function FullImage() {
       <div className={styles.overlay} />
       <div className={styles.text}>
         <blockquote className={styles.quote}>
-          "Strategy is common.<br /><em>Growth is earned."</em>
+          "Revenue is the output.<br /><em>Architecture is the input."</em>
         </blockquote>
-        <cite className={styles.attr}>Crescivo — Competitive Positioning</cite>
+        <cite className={styles.attr}>Crescivo — Scale Beyond the Founder.</cite>
       </div>
     </div>
   )

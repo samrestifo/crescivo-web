@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import styles from './Nav.module.css'
 
 const LINKS = [
-  { href: '#services',   label: 'What We Do'      },
-  { href: '#diagnostic', label: 'The Entry Point' },
-  { href: '#results',    label: 'Case Study'      },
-  { href: '#about-team', label: 'Who We Are'      },
+  { href: '#services',   label: 'Revenue Architecture' },
+  { href: '#diagnostic', label: 'Diagnostic'           },
+  { href: '#results',    label: 'Outcomes'             },
+  { href: '#about-team', label: 'Operators'            },
 ]
 
 function Wordmark() {
@@ -14,7 +14,7 @@ function Wordmark() {
       <span className={styles.wordmarkName}>
         <span className={styles.c}>C</span>RESCIVO
       </span>
-      <span className={styles.wordmarkSub}>Ecosystem Growth Advisory</span>
+      <span className={styles.wordmarkSub}>Revenue Architecture™</span>
     </div>
   )
 }

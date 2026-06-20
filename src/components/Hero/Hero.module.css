@@ -248,6 +248,7 @@
   color: rgba(248, 250, 251, 0.5);
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 18px;
 }
 
@@ -331,13 +332,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px 10px;
     padding: 10px 24px;
     font-size: 8px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: rgba(248, 250, 251, 0.4);
     border-top: 1px solid rgba(255, 255, 255, 0.06);
+    flex-wrap: wrap;
   }
   .mobileCtaBtn {
     display: block;

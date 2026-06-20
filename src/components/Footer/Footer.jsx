@@ -7,16 +7,21 @@ export default function Footer() {
         <img src="/images/crescivo-logo.png" alt="Crescivo" width={26} height={26} loading="lazy" />
         <div>
           <div className={styles.wm}><span className={styles.c}>C</span>RESCIVO</div>
-          <div className={styles.sub}>Ecosystem Growth Advisory</div>
+          <div className={styles.sub}>Revenue Architecture™</div>
         </div>
       </div>
       <ul className={styles.links}>
-        {['Services','Diagnostic','Results','Contact'].map(l => (
-          <li key={l}><a href={`#${l.toLowerCase()}`}>{l}</a></li>
+        {[
+          { label:'Revenue Architecture', href:'#services'   },
+          { label:'Diagnostic',           href:'#diagnostic' },
+          { label:'Outcomes',             href:'#results'    },
+          { label:'Contact',              href:'#contact'    },
+        ].map(({ label, href }) => (
+          <li key={href}><a href={href}>{label}</a></li>
         ))}
       </ul>
       <div className={styles.legal}>
-        © 2026 Crescivo.&ensp;·&ensp;crescivo.partners&ensp;·&ensp;Illustrative figures based on real engagements.
+        © 2026 Crescivo.&ensp;·&ensp;crescivo.partners&ensp;·&ensp;Scale Beyond the Founder.
       </div>
     </footer>
   )

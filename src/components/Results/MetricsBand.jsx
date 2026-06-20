@@ -2,7 +2,7 @@ import styles from './MetricsBand.module.css'
 const METRICS = [
   { n:'$4M',  l:'ARR built · 24 months',           c:'var(--champ-l)' },
   { n:'+38%', l:'Pipeline velocity increase',       c:'var(--teal-l)'  },
-  { n:'3×',   l:'Channel partner activation',       c:'var(--champ-l)' },
+  { n:'3×',   l:'Ecosystem leverage created',       c:'var(--champ-l)' },
 ]
 export default function MetricsBand() {
   return (

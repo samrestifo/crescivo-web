@@ -3,8 +3,8 @@ import styles from './Hero.module.css'
 
 const CAPS = [
   {
-    label: 'Ecosystem Strategy',
-    desc: 'Partner networks engineered to multiply reach without multiplying headcount.',
+    label: 'Revenue Architecture',
+    desc: 'Commercial systems designed to remove founder dependency and create repeatable growth.',
     icon: (
       <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="14" cy="14" r="2.5" fill="var(--champ)" stroke="none"/>
@@ -22,8 +22,8 @@ const CAPS = [
     ),
   },
   {
-    label: 'Executive Access',
-    desc: 'Direct lines to the operators and decision-makers who move enterprise deals.',
+    label: 'Operating Cadence',
+    desc: 'Weekly leadership rhythm, pipeline discipline and board-ready revenue visibility.',
     icon: (
       <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="14,2 16.5,5 14,8 11.5,5" fill="var(--champ)" stroke="none"/>
@@ -35,8 +35,8 @@ const CAPS = [
     ),
   },
   {
-    label: 'Strategic Partnerships',
-    desc: 'Co-sell motions and alliances that turn relationships into pipeline.',
+    label: 'Ecosystem Leverage',
+    desc: 'Partner and alliance motions that multiply reach without multiplying headcount.',
     icon: (
       <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="3"  cy="9" r="1.6" fill="var(--champ)" stroke="none"/>
@@ -52,8 +52,8 @@ const CAPS = [
     ),
   },
   {
-    label: 'Growth Advisory',
-    desc: 'Commercial architecture and GTM discipline that compounds revenue.',
+    label: 'Founder Autonomy',
+    desc: 'Build a company that grows without the founder in every deal, decision and relationship.',
     icon: (
       <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <line x1="4" y1="24" x2="24" y2="24"/>
@@ -106,14 +106,16 @@ export default function Hero() {
       {/* Headline block */}
       <div className={styles.main}>
         <h1 className={styles.h1}>
-          <span className={styles.h1Line1}>Growth Beyond</span>
+          <span className={styles.h1Line1}>Scale Beyond</span>
           <br />
           <em className={styles.h1Em}>the Founder.</em>
         </h1>
         <div className={styles.divider} />
         <p className={styles.sub}>
-          Helping founder-led technology companies build scalable growth
-          through partnerships, ecosystems and executive influence.
+          Revenue Architecture™ for B2B scale-ups with proven product-market fit.
+        </p>
+        <p className={styles.sub}>
+          Every successful founder eventually reaches the same inflection point. The product works. Customers are buying. The team is growing. But revenue still depends on the founder. Crescivo builds the commercial architecture that changes that.
         </p>
       </div>
 
@@ -144,18 +146,18 @@ export default function Hero() {
         {/* Desktop footer bar */}
         <div className={styles.footerBar}>
           <div className={styles.tagline}>
-            <span>Strategy</span>
+            <span>Revenue Architecture</span>
             <span className={styles.sep} />
-            <span>Ecosystems</span>
+            <span>Founder Autonomy</span>
             <span className={styles.sep} />
-            <span className={styles.accent}>Growth</span>
+            <span className={styles.accent}>Repeatable Growth</span>
           </div>
           <div className={styles.actions}>
             <a href="#diagnostic" className="btn-primary">
-              Book a Growth Diagnostic Session
+              Book a Growth Diagnostic
             </a>
             <a href="#services" className="btn-ghost">
-              Our Services
+              Explore the Method
             </a>
           </div>
         </div>
@@ -163,14 +165,14 @@ export default function Hero() {
         {/* Mobile CTA */}
         <div className={styles.mobileCta}>
           <div className={styles.mobileTagline}>
-            <span>Strategy.</span>
+            <span>Revenue Architecture.</span>
             <span className={styles.sep} />
-            <span>Ecosystems.</span>
+            <span>Founder Autonomy.</span>
             <span className={styles.sep} />
-            <span className={styles.accent}>Growth.</span>
+            <span className={styles.accent}>Repeatable Growth.</span>
           </div>
           <a href="#contact" className={styles.mobileCtaBtn}>
-            Book a Growth Diagnostic Session →
+            Book a Growth Diagnostic →
           </a>
           <p className={styles.mobileCtaMicro}>
             30-minute executive discussion. No obligation.

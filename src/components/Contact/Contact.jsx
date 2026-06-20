@@ -2,10 +2,10 @@ import { useState } from 'react'
 import styles from './Contact.module.css'
 
 const FIELDS = [
-  { id:'name',      label:'Your Name',         ph:'Sam Smith',                type:'text' },
-  { id:'company',   label:'Company',           ph:'Acme SaaS Co',             type:'text' },
-  { id:'arr',       label:'ARR Range',         ph:'$1M – $5M',                type:'text' },
-  { id:'challenge', label:'Primary Challenge', ph:'Post-Series A GTM build',  type:'text' },
+  { id:'name',      label:'Your Name',          ph:'Sam Smith',                        type:'text' },
+  { id:'company',   label:'Company',            ph:'Acme Scale-up',                    type:'text' },
+  { id:'arr',       label:'Revenue Stage',      ph:'$2M – $20M ARR',                   type:'text' },
+  { id:'challenge', label:'Primary Constraint', ph:'Founder still in every enterprise deal', type:'text' },
 ]
 
 const DETAILS = ['hello@crescivo.partners', '/company/crescivo', 'Sydney, AU']
@@ -26,10 +26,10 @@ export default function Contact() {
       <div className={styles.panel}>
         <div className="eyebrow">Let's Talk</div>
         <h2 className={styles.title}>
-          Ready to grow <em>beyond the founder?</em>
+          Ready to scale <em>beyond the founder?</em>
         </h2>
         <p className={styles.sub}>
-          Tell us where growth has stalled. If we're the right fit, we'll design a session that maps the path forward.
+          Tell us where growth still depends too heavily on the founder. If we're the right fit, we'll map the constraints and define the path toward repeatable enterprise growth.
         </p>
         <div className={styles.details}>
           {DETAILS.map(d => (
