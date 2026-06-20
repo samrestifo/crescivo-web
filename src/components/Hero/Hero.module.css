@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-/* ── Background — desktop image, parallax via JS ── */
+/* ── Background — desktop image, parallax via JS (desktop only) ── */
 .bg {
   position: absolute;
   inset: 0;
@@ -21,7 +21,7 @@
 @media (max-width: 767px) {
   .bg {
     background-image: url('/images/hero-mountain-mobile.webp');
-    background-position: center 15%;
+    background-position: center 10%;
   }
 }
 
@@ -39,15 +39,17 @@
   );
 }
 
-/* On mobile: heavier bottom overlay so text reads over portrait crop */
+/* On mobile: vertical gradient that stays clear over the top half so the
+   mountain and figure read, then darkens from ~60% down for the text/CTAs */
 @media (max-width: 767px) {
   .overlayLeft {
     background: linear-gradient(
       180deg,
-      rgba(10,15,24,0.55) 0%,
-      rgba(10,15,24,0.3)  30%,
-      rgba(10,15,24,0.75) 70%,
-      rgba(10,15,24,0.95) 100%
+      rgba(10,15,24,0)    0%,
+      rgba(10,15,24,0)    45%,
+      rgba(10,15,24,0.6)  60%,
+      rgba(10,15,24,0.9)  80%,
+      rgba(10,15,24,0.97) 100%
     );
   }
 }
@@ -79,7 +81,7 @@
   flex-shrink: 0;
 }
 
-/* ── Headline block — anchored to bottom of middle zone ── */
+/* ── Headline block ── */
 .main {
   position: relative;
   z-index: 2;
@@ -128,16 +130,16 @@
   position: relative;
   z-index: 2;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   flex-shrink: 0;
 }
 
-/* ── Capability tiles ── */
-.caps {
+/* ── Desktop capability strip (icon + label only) ── */
+.capsDesktop {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .cap {
@@ -173,7 +175,53 @@
   font-weight: 400;
 }
 
-/* ── Footer bar ── */
+/* ── Mobile capability tiles (2×2 rich) ── */
+.capsMobile {
+  display: none;
+}
+
+.capRich {
+  padding: 22px 16px;
+  background: rgba(10, 15, 24, 0.62);
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.capRichIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.capRichIcon svg { width: 40px; height: 40px; }
+
+.capRichTitle {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.capRichDivider {
+  width: 28px;
+  height: 2px;
+  background: var(--champ);
+}
+
+.capRichDesc {
+  font-size: 11px;
+  color: rgba(248, 250, 251, 0.55);
+  line-height: 1.6;
+}
+
+/* ── Desktop footer bar ── */
 .footerBar {
   display: flex;
   align-items: center;
@@ -206,8 +254,13 @@
   gap: 12px;
 }
 
+/* ── Mobile CTA ── */
+.mobileCta {
+  display: none;
+}
+
 /* ── Mobile ── */
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .main {
     padding: 0 var(--space-6) var(--space-8);
     max-width: 100%;
@@ -215,25 +268,57 @@
   .h1 { font-size: clamp(36px, 9vw, 56px); }
   .sub { font-size: 14px; }
 
-  /* 2×2 grid on mobile */
-  .caps {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  /* Re-add right border on col 1 of each row */
-  .cap:nth-child(odd)  { border-right: 1px solid rgba(255,255,255,0.07); }
-  .cap:nth-child(even) { border-right: none; }
-  /* Add bottom border between rows */
-  .cap:nth-child(1),
-  .cap:nth-child(2) {
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-  }
+  .capsDesktop { display: none; }
 
-  .footerBar {
+  .capsMobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  /* Strip the outer-edge borders so the grid reads as a clean 2×2 */
+  .capRich:nth-child(even) { border-right: none; }
+  .capRich:nth-child(3),
+  .capRich:nth-child(4) { border-bottom: none; }
+
+  .footerBar { display: none; }
+
+  .mobileCta {
+    display: flex;
     flex-direction: column;
     gap: 14px;
-    padding: 16px var(--space-6);
+    padding: 18px var(--space-6) 22px;
+    background: rgba(10, 15, 24, 0.78);
   }
-  .tagline { display: none; }
-  .actions { width: 100%; flex-direction: column; }
-  .actions a { text-align: center; }
+  .mobileTagline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(248, 250, 251, 0.4);
+  }
+  .mobileBtn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--champ);
+    color: var(--ink);
+    padding: 15px 24px;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background var(--t-fast);
+  }
+  .mobileBtn:hover { background: var(--champ-l); }
+  .mobileMicro {
+    text-align: center;
+    font-size: 11px;
+    color: rgba(248, 250, 251, 0.4);
+    letter-spacing: 0.02em;
+  }
 }

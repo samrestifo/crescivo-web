@@ -3,44 +3,8 @@ import styles from './Hero.module.css'
 
 const CAPS = [
   {
-    label: 'Growth\nAdvisory',
-    icon: (
-      <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="14" cy="14" r="10"/>
-        <circle cx="14" cy="14" r="1.5" fill="var(--champ)" stroke="none"/>
-        <polygon points="14,4 16,13 14,11 12,13" fill="var(--champ)" stroke="none"/>
-        <polygon points="14,24 16,15 14,17 12,15" fill="none" stroke="var(--champ)" strokeWidth="1"/>
-        <polygon points="4,14 13,12 11,14 13,16" fill="none" stroke="var(--champ)" strokeWidth="1"/>
-        <polygon points="24,14 15,12 17,14 15,16" fill="none" stroke="var(--champ)" strokeWidth="1"/>
-      </svg>
-    ),
-  },
-  {
-    label: 'Executive\nAccess',
-    icon: (
-      <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="14" cy="11" r="4"/>
-        <path d="M5 24 Q5 17 14 17 Q23 17 23 24"/>
-        <polygon points="14,2 16.5,5 14,8 11.5,5" fill="var(--champ)" stroke="none"/>
-      </svg>
-    ),
-  },
-  {
-    label: 'Strategic\nPartnerships',
-    icon: (
-      <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 16 L9 10 L13 13 L18 8 L25 12"/>
-        <path d="M9 10 L9 7"/>
-        <path d="M13 13 L13 17 Q13 20 10 20 L7 20"/>
-        <path d="M18 8 L18 5"/>
-        <circle cx="9" cy="6" r="1.5" fill="var(--champ)" stroke="none"/>
-        <circle cx="18" cy="4" r="1.5" fill="var(--champ)" stroke="none"/>
-        <circle cx="25" cy="12" r="1.5" fill="var(--champ)" stroke="none"/>
-      </svg>
-    ),
-  },
-  {
-    label: 'Ecosystem\nStrategy',
+    label: 'Ecosystem Strategy',
+    desc: 'Partner networks engineered to multiply reach without multiplying headcount.',
     icon: (
       <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="14" cy="14" r="2.5" fill="var(--champ)" stroke="none"/>
@@ -57,13 +21,59 @@ const CAPS = [
       </svg>
     ),
   },
+  {
+    label: 'Executive Access',
+    desc: 'Direct lines to the operators and decision-makers who move enterprise deals.',
+    icon: (
+      <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="14,2 16.5,5 14,8 11.5,5" fill="var(--champ)" stroke="none"/>
+        <circle cx="9"  cy="14" r="3"/>
+        <circle cx="19" cy="14" r="3"/>
+        <path d="M4 25 Q4 19 9 19 Q14 19 14 25"/>
+        <path d="M14 25 Q14 19 19 19 Q24 19 24 25"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Strategic Partnerships',
+    desc: 'Co-sell motions and alliances that turn relationships into pipeline.',
+    icon: (
+      <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="3"  cy="9" r="1.6" fill="var(--champ)" stroke="none"/>
+        <circle cx="25" cy="9" r="1.6" fill="var(--champ)" stroke="none"/>
+        <path d="M3 9 L11 14"/>
+        <path d="M25 9 L17 14"/>
+        <polygon points="11,14 14,12 17,14 14,16" fill="none"/>
+        <path d="M11 14 L8 19"/>
+        <path d="M17 14 L20 19"/>
+        <circle cx="8"  cy="21" r="1.6" fill="var(--champ)" stroke="none"/>
+        <circle cx="20" cy="21" r="1.6" fill="var(--champ)" stroke="none"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Growth Advisory',
+    desc: 'Commercial architecture and GTM discipline that compounds revenue.',
+    icon: (
+      <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="4" y1="24" x2="24" y2="24"/>
+        <rect x="5"  y="17" width="3.5" height="7"  stroke="var(--champ)"/>
+        <rect x="11" y="13" width="3.5" height="11" stroke="var(--champ)"/>
+        <rect x="17" y="9"  width="3.5" height="15" stroke="var(--champ)"/>
+        <path d="M4 18 L10 13 L15 15 L23 6"/>
+        <polyline points="18,6 23,6 23,11"/>
+      </svg>
+    ),
+  },
 ]
 
 export default function Hero() {
   const bgRef = useRef(null)
 
-  // Parallax — subtle, passive listener for performance
+  // Parallax — desktop only. Attach the scroll listener solely when the
+  // viewport is desktop-width, so mobile keeps the static framed crop.
   useEffect(() => {
+    if (!window.matchMedia('(min-width: 768px)').matches) return
     const onScroll = () => {
       if (!bgRef.current) return
       const y = window.scrollY
@@ -77,7 +87,7 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      {/* Background — WebP, preloaded in <head> */}
+      {/* Background — WebP, desktop/mobile swap handled in CSS */}
       <div
         ref={bgRef}
         className={styles.bg}
@@ -107,28 +117,38 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Bottom: caps + action bar */}
+      {/* Bottom strip */}
       <div className={styles.bottom}>
-        <div className={styles.caps}>
+        {/* Desktop: icon + label only */}
+        <div className={styles.capsDesktop}>
           {CAPS.map(({ label, icon }) => (
             <div key={label} className={styles.cap}>
               <div className={styles.capIcon}>{icon}</div>
-              <div className={styles.capLabel}>
-                {label.split('\n').map((line, i) => (
-                  <span key={i}>{line}{i === 0 && <br />}</span>
-                ))}
-              </div>
+              <div className={styles.capLabel}>{label}</div>
             </div>
           ))}
         </div>
 
+        {/* Mobile: 2×2 rich tiles */}
+        <div className={styles.capsMobile}>
+          {CAPS.map(({ label, desc, icon }) => (
+            <div key={label} className={styles.capRich}>
+              <div className={styles.capRichIcon}>{icon}</div>
+              <div className={styles.capRichTitle}>{label}</div>
+              <div className={styles.capRichDivider} />
+              <div className={styles.capRichDesc}>{desc}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop footer bar */}
         <div className={styles.footerBar}>
           <div className={styles.tagline}>
-            <span>Connect</span>
+            <span>Strategy</span>
             <span className={styles.sep} />
-            <span>Influence</span>
+            <span>Ecosystems</span>
             <span className={styles.sep} />
-            <span className={styles.accent}>Scale</span>
+            <span className={styles.accent}>Growth</span>
           </div>
           <div className={styles.actions}>
             <a href="#diagnostic" className="btn-primary">
@@ -138,6 +158,23 @@ export default function Hero() {
               Our Services
             </a>
           </div>
+        </div>
+
+        {/* Mobile CTA */}
+        <div className={styles.mobileCta}>
+          <div className={styles.mobileTagline}>
+            <span>Strategy.</span>
+            <span className={styles.sep} />
+            <span>Ecosystems.</span>
+            <span className={styles.sep} />
+            <span className={styles.accent}>Growth.</span>
+          </div>
+          <a href="#contact" className={styles.mobileBtn}>
+            Start a Growth Conversation →
+          </a>
+          <p className={styles.mobileMicro}>
+            30-minute executive discussion. No obligation.
+          </p>
         </div>
       </div>
     </section>

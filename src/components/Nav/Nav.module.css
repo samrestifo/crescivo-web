@@ -27,6 +27,11 @@
   gap: 12px;
 }
 
+.logoImg {
+  width: 48px;
+  height: 48px;
+}
+
 .wordmark {
   display: flex;
   flex-direction: column;
@@ -35,7 +40,7 @@
 
 .wordmarkName {
   font-family: var(--font-serif);
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 0.05em;
   color: var(--ivory);
   font-weight: 400;
@@ -45,7 +50,7 @@
 .c { color: var(--champ-l); }
 
 .wordmarkSub {
-  font-size: 7px;
+  font-size: 8px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(200, 169, 110, 0.6);
@@ -53,6 +58,7 @@
   font-weight: 300;
 }
 
+/* ── Desktop links ── */
 .links {
   display: flex;
   align-items: center;
@@ -79,7 +85,95 @@
 }
 .cta:hover { background: var(--champ-l) !important; }
 
+/* ── Hamburger (mobile only) ── */
+.burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 22px;
+  z-index: 320;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.burger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--ivory);
+  transition:
+    transform var(--t-mid) var(--ease),
+    opacity var(--t-fast) var(--ease),
+    top var(--t-mid) var(--ease);
+}
+.burger span:nth-child(1) { top: 0; }
+.burger span:nth-child(2) { top: 10px; }
+.burger span:nth-child(3) { top: 20px; }
+
+.burgerOpen span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+.burgerOpen span:nth-child(2) { opacity: 0; }
+.burgerOpen span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+
+/* ── Full-screen mobile drawer ── */
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 310;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-12);
+  background: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-mid) var(--ease);
+}
+.drawerOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawerLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  list-style: none;
+  margin-bottom: var(--space-6);
+}
+.drawerLinks a {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  letter-spacing: 0.02em;
+  color: var(--ivory);
+  transition: color var(--t-fast);
+}
+.drawerLinks a:hover { color: var(--champ-l); }
+
+.drawerCta {
+  display: inline-block;
+  background: var(--champ);
+  color: var(--ink);
+  padding: 14px 32px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: background var(--t-fast);
+}
+.drawerCta:hover { background: var(--champ-l); }
+
+/* ── Responsive ── */
 @media (max-width: 960px) {
   .nav { padding: 0 var(--space-6); }
+  .logoImg { width: 42px; height: 42px; }
+  .wordmarkName { font-size: 18px; }
   .links { display: none; }
+  .burger { display: block; }
+}
+
+@media (min-width: 961px) {
+  .drawer { display: none; }
 }
