@@ -15,4 +15,10 @@
 .num  { font-family: var(--font-serif); font-size: 56px; color: rgba(200,169,110,0.22); line-height: 1; margin-bottom: 14px; }
 .head { font-family: var(--font-serif); font-size: 20px; color: var(--ivory); line-height: 1.3; margin-bottom: 12px; }
 .body { font-size: 14px; color: var(--muted); line-height: 1.8; }
-@media (max-width: 960px) { .grid { grid-template-columns: 1fr; } .cell { padding: 36px 24px; } }
+@media (max-width: 960px) {
+  .grid { grid-template-columns: 1fr; }
+  .cell { padding: 28px 20px; }
+  .num  { font-size: 40px; }
+  .head { font-size: 17px; }
+  .body { font-size: 13px; }
+}

@@ -23,6 +23,14 @@
 }
 .title em { color: var(--champ-l); font-style: italic; }
 
+.sub {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
 /* Inline contact details, separated by thin vertical dividers */
 .details {
   display: flex;
@@ -100,4 +108,8 @@
   .panel { padding: 40px 24px; }
   .title { font-size: 26px; }
   .form  { grid-template-columns: 1fr; }
+  /* Single contact detail (email only) — hide the rest and the dividers */
+  .detail:nth-child(2),
+  .detail:nth-child(3) { display: none; }
+  .detail:not(:last-child)::after { display: none; }
 }

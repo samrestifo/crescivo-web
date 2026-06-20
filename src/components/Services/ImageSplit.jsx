@@ -1,6 +1,8 @@
+import styles from './ImageSplit.module.css'
+
 export default function ImageSplit() {
   return (
-    <div className="img-split reveal">
+    <div className={`img-split reveal ${styles.root}`}>
       <div className="img-panel">
         <img
           src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=900&q=80&fit=crop"

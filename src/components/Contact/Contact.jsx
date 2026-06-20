@@ -28,6 +28,9 @@ export default function Contact() {
         <h2 className={styles.title}>
           Ready to grow <em>beyond the founder?</em>
         </h2>
+        <p className={styles.sub}>
+          Tell us where growth has stalled. If we're the right fit, we'll design a session that maps the path forward.
+        </p>
         <div className={styles.details}>
           {DETAILS.map(d => (
             <span key={d} className={styles.detail}>{d}</span>

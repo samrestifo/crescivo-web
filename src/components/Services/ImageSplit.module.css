@@ -1,0 +1,5 @@
+/* Mobile: drop the image, render the text panel as a full-width section */
+@media (max-width: 960px) {
+  .root :global(.img-panel) { display: none; }
+  .root :global(.txt-panel) { padding: 48px 24px; }
+}

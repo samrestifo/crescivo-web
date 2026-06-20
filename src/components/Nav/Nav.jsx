@@ -21,7 +21,7 @@ function Wordmark() {
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -29,11 +29,11 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Lock body scroll while the mobile drawer is open
+  // Lock body scroll while the drawer is open
   useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : ''
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
-  }, [open])
+  }, [menuOpen])
 
   return (
     <>
@@ -58,20 +58,28 @@ export default function Nav() {
 
         <button
           type="button"
-          className={`${styles.burger} ${open ? styles.burgerOpen : ''}`}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          onClick={() => setOpen(v => !v)}
+          className={styles.burger}
+          aria-label="Open menu"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen(o => !o)}
         >
           <span /><span /><span />
         </button>
       </nav>
 
-      <div className={`${styles.drawer} ${open ? styles.drawerOpen : ''}`}>
+      <div className={`${styles.drawer} ${menuOpen ? styles.drawerOpen : ''}`}>
+        <button
+          type="button"
+          className={styles.drawerClose}
+          aria-label="Close menu"
+          onClick={() => setMenuOpen(false)}
+        >
+          ×
+        </button>
         <ul className={styles.drawerLinks}>
           {LINKS.map(({ href, label }) => (
             <li key={href}>
-              <a href={href} onClick={() => setOpen(false)}>{label}</a>
+              <a href={href} onClick={() => setMenuOpen(false)}>{label}</a>
             </li>
           ))}
         </ul>

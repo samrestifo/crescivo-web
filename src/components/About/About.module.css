@@ -8,3 +8,8 @@
 .pullQuote{ border-left:2px solid var(--teal); padding-left:18px; }
 .pullQuote p    { font-family:var(--font-serif); font-style:italic; font-size:16px; color:var(--ivory); line-height:1.5; margin-bottom:7px; }
 .pullQuote cite { font-size:9px; letter-spacing:0.35em; text-transform:uppercase; color:var(--teal-l); font-style:normal; }
+@media (max-width:960px) {
+  :global(#about-team .img-panel) { display:none; }
+  :global(#about-team .txt-panel) { padding:48px 24px; }
+  .creds { display:none; }
+}

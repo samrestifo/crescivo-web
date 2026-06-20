@@ -7,4 +7,7 @@
 .links a{ font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--mid); transition:color var(--t-fast); }
 .links a:hover { color:var(--ivory); }
 .legal  { font-size:10px; color:var(--mid); }
-@media (max-width:960px) { .footer{flex-direction:column;gap:20px;text-align:center;padding:40px 24px;} .links{flex-wrap:wrap;justify-content:center;} }
+@media (max-width:960px) {
+  .footer { flex-direction:column; align-items:center; gap:16px; text-align:center; padding:32px 24px; }
+  .links  { display:none; }
+}
