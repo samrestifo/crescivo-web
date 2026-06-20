@@ -169,10 +169,10 @@ export default function Hero() {
             <span className={styles.sep} />
             <span className={styles.accent}>Growth.</span>
           </div>
-          <a href="#contact" className={styles.mobileBtn}>
+          <a href="#contact" className={styles.mobileCtaBtn}>
             Book a Growth Diagnostic Session →
           </a>
-          <p className={styles.mobileMicro}>
+          <p className={styles.mobileCtaMicro}>
             30-minute executive discussion. No obligation.
           </p>
         </div>
