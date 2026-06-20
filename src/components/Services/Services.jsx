@@ -7,12 +7,17 @@ const SERVICES = [
     tags: ['ICP Clarity','Positioning','GTM Design','Commercial Model'],
   },
   {
-    n: '02', eye: 'Operations & Leadership', title: 'Revenue Operations & Leadership',
-    body: 'Install the operating cadence, pipeline governance, dashboards and executive visibility for predictable growth — and build the leadership muscle that lets the team operate without the founder in every decision.',
-    tags: ['Operating Cadence','Pipeline Governance','Leadership Rhythm','Autonomy'],
+    n: '02', eye: 'Leadership', title: 'Sales, GTM Leadership & Founder Autonomy',
+    body: 'Install the sales and GTM leadership rhythm, role clarity and commercial discipline required for the team to operate without the founder in every deal or decision.',
+    tags: ['Sales Leadership','GTM Leadership','Role Clarity','Founder Autonomy'],
   },
   {
-    n: '03', eye: 'Ecosystem', title: 'Partners, Alliances & Strategic Influence',
+    n: '03', eye: 'Operations', title: 'Revenue Rhythm & Forecast Discipline',
+    body: 'Install the operating cadence, pipeline governance, dashboards and executive visibility required for predictable growth.',
+    tags: ['Operating Cadence','Pipeline Governance','Forecasting','Board Reporting'],
+  },
+  {
+    n: '04', eye: 'Ecosystem', title: 'Partners, Alliances & Strategic Influence',
     body: 'Build leverage through the relationships, channels and co-sell motions that multiply reach without multiplying headcount.',
     tags: ['Partner Motion','Co-sell','Alliance Strategy','Ecosystem Map'],
   },

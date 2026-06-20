@@ -1,4 +1,4 @@
-.grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; background:var(--bs); }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--bs); }
 .card { background:var(--ink); padding:36px 28px; position:relative; overflow:hidden; transition:background var(--t-mid); }
 .card:hover { background:var(--slate); }
 .topBar { position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--teal),transparent); opacity:0; transition:opacity var(--t-mid); }
