@@ -1,0 +1,85 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-16);
+  height: var(--nav-h);
+  background: rgba(10, 15, 24, 0);
+  border-bottom: 1px solid transparent;
+  transition:
+    background 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+
+.scrolled {
+  background: rgba(10, 15, 24, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: var(--bs);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wordmarkName {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: var(--ivory);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.c { color: var(--champ-l); }
+
+.wordmarkSub {
+  font-size: 7px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(200, 169, 110, 0.6);
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  list-style: none;
+}
+
+.links a {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(248, 250, 251, 0.6);
+  transition: color var(--t-fast);
+}
+.links a:hover { color: var(--ivory); }
+
+.cta {
+  background: var(--champ) !important;
+  color: var(--ink) !important;
+  padding: 10px 22px !important;
+  font-size: 10px !important;
+  letter-spacing: 0.14em !important;
+  transition: background var(--t-fast) !important;
+}
+.cta:hover { background: var(--champ-l) !important; }
+
+@media (max-width: 960px) {
+  .nav { padding: 0 var(--space-6); }
+  .links { display: none; }
+}

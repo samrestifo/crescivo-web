@@ -1,0 +1,10 @@
+.panel    {}
+.manifesto{ font-family:var(--font-serif); font-size:clamp(20px,2.4vw,30px); line-height:1.45; color:var(--ivory); margin-bottom:24px; }
+.manifesto em { color:var(--champ-l); font-style:italic; }
+.body     { font-size:14px; color:var(--muted); line-height:1.85; margin-bottom:18px; }
+.creds    { display:flex; flex-direction:column; gap:9px; margin-top:28px; margin-bottom:28px; }
+.cred     { display:flex; align-items:flex-start; gap:14px; padding:13px 16px; border:1px solid var(--bs); background:var(--bg-r); font-size:13px; color:var(--muted); line-height:1.5; }
+.dot      { width:5px; height:5px; border-radius:50%; background:var(--champ); flex-shrink:0; margin-top:5px; }
+.pullQuote{ border-left:2px solid var(--teal); padding-left:18px; }
+.pullQuote p    { font-family:var(--font-serif); font-style:italic; font-size:16px; color:var(--ivory); line-height:1.5; margin-bottom:7px; }
+.pullQuote cite { font-size:9px; letter-spacing:0.35em; text-transform:uppercase; color:var(--teal-l); font-style:normal; }

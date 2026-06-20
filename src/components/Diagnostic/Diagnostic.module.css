@@ -1,0 +1,8 @@
+.wrap { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.price{ display:inline-flex; align-items:baseline; gap:10px; background:var(--slate); border:1px solid var(--bc); padding:16px 24px; margin-bottom:32px; }
+.priceN { font-family:var(--font-serif); font-size:36px; color:var(--champ-l); line-height:1; }
+.priceL { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--mid); }
+.deliverables { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.d { display:flex; align-items:flex-start; gap:10px; padding:11px 13px; background:var(--slate); border:1px solid var(--bs); font-size:12px; color:var(--muted); line-height:1.5; }
+.d::before { content:''; width:4px; height:4px; border-radius:50%; background:var(--teal-l); flex-shrink:0; margin-top:5px; }
+@media (max-width:960px) { .wrap { grid-template-columns:1fr; gap:40px; } }

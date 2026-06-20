@@ -1,0 +1,10 @@
+.footer { background:var(--ink); border-top:1px solid var(--bs); padding:44px 80px; display:flex; align-items:center; justify-content:space-between; }
+.logo   { display:flex; align-items:center; gap:12px; }
+.wm     { font-family:var(--font-serif); font-size:13px; color:var(--ivory); line-height:1; }
+.c      { color:var(--champ-l); }
+.sub    { font-size:7px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(200,169,110,0.5); margin-top:3px; font-family:var(--font-sans); font-weight:300; }
+.links  { display:flex; gap:28px; list-style:none; }
+.links a{ font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--mid); transition:color var(--t-fast); }
+.links a:hover { color:var(--ivory); }
+.legal  { font-size:10px; color:var(--mid); }
+@media (max-width:960px) { .footer{flex-direction:column;gap:20px;text-align:center;padding:40px 24px;} .links{flex-wrap:wrap;justify-content:center;} }

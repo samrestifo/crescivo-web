@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta -->
+    <title>Crescivo — Ecosystem Growth Advisory</title>
+    <meta name="description" content="Helping founder-led technology companies build scalable growth through partnerships, ecosystems and executive influence." />
+    <meta name="theme-color" content="#0A0F18" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://crescivo.partners/" />
+    <meta property="og:title" content="Crescivo — Ecosystem Growth Advisory" />
+    <meta property="og:description" content="Helping founder-led technology companies build scalable growth through partnerships, ecosystems and executive influence." />
+    <meta property="og:image" content="/images/hero-mountain-desktop.webp" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/crescivo-logo.png" />
+
+    <!-- Preconnect for fonts — non-blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts — display=swap so text shows immediately in fallback -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Jost:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preload hero images — browser picks correct one via media query.
+         This prevents LCP delay on both desktop and mobile. -->
+    <link
+      rel="preload"
+      href="/images/hero-mountain-desktop.webp"
+      as="image"
+      type="image/webp"
+      media="(min-width: 768px)"
+    />
+    <link
+      rel="preload"
+      href="/images/hero-mountain-mobile.webp"
+      as="image"
+      type="image/webp"
+      media="(max-width: 767px)"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

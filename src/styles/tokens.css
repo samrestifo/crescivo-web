@@ -1,0 +1,56 @@
+/* ═══════════════════════════════════════════════════════
+   CRESCIVO DESIGN TOKENS
+   Single source of truth — import into index.css only
+═══════════════════════════════════════════════════════ */
+:root {
+  /* ── Colour ── */
+  --ink:      #0A0F18;
+  --slate:    #151D27;
+  --slate2:   #1C2A38;
+  --slate3:   #243548;
+  --teal:     #2A8C7A;
+  --teal-l:   #3DB89F;
+  --cyan:     #5FD4C0;
+  --frost:    #B8EDE6;
+  --mid:      #546270;
+  --muted:    #7A8FA0;
+  --bone:     #F2F5F7;
+  --ivory:    #F8FAFB;
+  --champ:    #C8A96E;
+  --champ-l:  #DFC28A;
+  --champ-d:  #9A7A3C;
+  --bg-r:     #0F1720;
+  --bs:       rgba(255, 255, 255, 0.07);
+  --bt:       rgba(42, 140, 122, 0.3);
+  --bc:       rgba(200, 169, 110, 0.3);
+
+  /* ── Typography ── */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'Jost', system-ui, sans-serif;
+
+  /* ── Spacing ── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ── Layout ── */
+  --max-w:       1200px;
+  --nav-h:       72px;
+  --section-pad: var(--space-24) var(--space-20);
+
+  /* ── Transitions ── */
+  --ease:     cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --t-fast:   0.15s;
+  --t-mid:    0.3s;
+  --t-slow:   0.6s;
+}
