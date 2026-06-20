@@ -302,7 +302,7 @@
     width: 100%;
     max-width: none;
     padding: 0 22px;
-    margin-top: clamp(220px, 33vh, 320px);
+    margin-top: clamp(200px, 31vh, 300px);
     background: transparent;
   }
   .h1 { font-size: 28px; line-height: 1.05; margin-bottom: 0; }
