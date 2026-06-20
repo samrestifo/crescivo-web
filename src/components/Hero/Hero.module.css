@@ -22,20 +22,18 @@
    render in normal flow under the image zone instead of inside it. */
 @media (max-width: 960px) {
   .hero {
-    display: flex;
-    flex-direction: column;
-    height: 100svh;
+    display: block;
+    height: auto;
     min-height: 0;
-    overflow: hidden;
+    overflow: visible;
     background: var(--ink);
   }
-  /* Image is its own in-flow box (flex:1) so it has a real height and
-     background-position frames the figure + mountain deterministically. */
+  /* Image is a fixed-height in-flow box — figure + mountain framed by
+     background-position; headline and tiles stack normally below it. */
   .bg {
     position: relative;
-    flex: 1 1 auto;
-    min-height: 0;
     width: 100%;
+    height: 42svh;
     background-image: url('/images/hero-mountain-mobile.webp');
     background-size: cover;
     background-position: center 52%;
@@ -63,6 +61,8 @@
 @media (max-width: 960px) {
   .overlayLeft,
   .overlayMid { display: none; }
+  /* Keep the top overlay only over the image, for nav contrast */
+  .overlayTop { height: 42svh; bottom: auto; }
 }
 
 .overlayMid {
@@ -275,18 +275,17 @@
   /* No spacer: the fixed nav floats over the top of the image */
   .navSpacer { display: none; }
 
-  /* Headline is a compact dark strip BELOW the image, not over the figure */
+  /* Headline + tagline: a dark strip BELOW the image, not over the figure */
   .main {
     position: relative;
     z-index: 2;
-    flex-shrink: 0;
     max-width: 100%;
     background: var(--ink);
-    padding: 22px 24px 18px;
+    padding: 22px 24px 20px;
   }
-  .h1 { font-size: 30px; margin-bottom: 0; }
-  .divider { margin: 12px 0 0; }
-  .sub { display: none; }
+  .h1 { font-size: 28px; margin-bottom: 0; }
+  .divider { margin: 12px 0 14px; }
+  .sub { display: block; font-size: 13px; max-width: 100%; line-height: 1.7; }
 
   /* Tiles + CTA: fixed block pinned to the bottom of the viewport */
   .bottom {
