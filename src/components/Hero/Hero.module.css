@@ -39,7 +39,7 @@
     height: 100%;
     background-image: url('/images/hero-mountain-mobile.webp');
     background-size: cover;
-    background-position: center 18%;
+    background-position: center 58%;
     background-repeat: no-repeat;
     opacity: 0.62;                /* slightly transparent / dimmed */
     transform: none !important;   /* disable parallax on mobile/tablet */
