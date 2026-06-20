@@ -152,7 +152,7 @@ export default function Hero() {
           </div>
           <div className={styles.actions}>
             <a href="#diagnostic" className="btn-primary">
-              Book a Growth Strategy Session
+              Book a Growth Diagnostic Session
             </a>
             <a href="#services" className="btn-ghost">
               Our Services
@@ -170,7 +170,7 @@ export default function Hero() {
             <span className={styles.accent}>Growth.</span>
           </div>
           <a href="#contact" className={styles.mobileBtn}>
-            Start a Growth Conversation →
+            Book a Growth Diagnostic Session →
           </a>
           <p className={styles.mobileMicro}>
             30-minute executive discussion. No obligation.

@@ -54,11 +54,6 @@ export default function Nav() {
           {LINKS.map(({ href, label }) => (
             <li key={href}><a href={href}>{label}</a></li>
           ))}
-          <li>
-            <a href="#contact" className={styles.cta}>
-              Book a Strategy Session
-            </a>
-          </li>
         </ul>
 
         <button
@@ -80,13 +75,6 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <a
-          href="#contact"
-          className={styles.drawerCta}
-          onClick={() => setOpen(false)}
-        >
-          Book a Strategy Session
-        </a>
       </div>
     </>
   )
