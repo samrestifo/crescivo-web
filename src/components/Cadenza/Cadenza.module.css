@@ -121,6 +121,6 @@
 @media (max-width: 960px) {
   .panel { padding: 48px 24px; }
   .accordion { margin: 4px 0 28px; }
-  .rowHeader { min-height: 56px; padding: 16px 0; }
+  .rowHeader { min-height: 56px; padding: 16px 18px 16px 0; }
   .rowBody   { padding: 0 0 18px; }
 }
