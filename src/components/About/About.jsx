@@ -26,7 +26,7 @@ export default function About() {
           Operators who've built it,<br />broken it and <em>scaled it</em>.
         </div>
         <p className={styles.body}>
-          Crescivo was founded by Sam Restifo and Guy Pozniak — operators who have built GTM functions, led enterprise sales teams and activated partner ecosystems across Australia, APAC and international markets.
+          Crescivo is led by Sam Restifo, Guy Pozniak and Jason Serda — three co-founder/operators who have built and sold significant businesses, led enterprise sales and GTM functions, activated partner ecosystems across Australia, APAC and international markets, and bring extensive executive network access.
         </p>
         <p className={styles.body}>
           We work with B2B scale-ups that have proven product-market fit but are still too dependent on founder-led growth. Our role is to build the commercial architecture, rhythm and leverage that lets the business scale beyond the founder.
@@ -41,7 +41,7 @@ export default function About() {
         </div>
         <div className={styles.pullQuote}>
           <p>"We don't replace founders. We multiply them."</p>
-          <cite>Sam Restifo & Guy Pozniak · Crescivo</cite>
+          <cite>Sam Restifo, Guy Pozniak & Jason Serda · Crescivo</cite>
         </div>
       </div>
     </div>
