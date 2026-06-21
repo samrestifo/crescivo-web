@@ -10,4 +10,7 @@
 @media (max-width:960px) {
   .footer { flex-direction:column; align-items:center; gap:16px; text-align:center; padding:32px 24px; }
   .links  { display:none; }
+  /* Keep icon + wordmark as a single centered lockup, text left of icon */
+  .logo   { justify-content:center; gap:10px; text-align:left; }
+  .wm, .sub { text-align:left; }
 }

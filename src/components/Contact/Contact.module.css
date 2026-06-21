@@ -2,23 +2,28 @@
   background: var(--ink);
   border-top: 1px solid var(--bs);
   border-bottom: 1px solid var(--bs);
-  padding: var(--space-16) var(--space-16);
 }
 
-.panel {
-  max-width: 860px;
+.inner {
+  max-width: var(--max-w);
   margin: 0 auto;
-  background: var(--slate2);
-  padding: 56px 64px;
+  padding: var(--space-16) var(--space-16);
+  display: grid;
+  grid-template-columns: 44fr 56fr;
+  gap: 64px;
+  align-items: center;
 }
+
+/* ── Left column ── */
+.copy { max-width: 480px; }
 
 .title {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 32px;
-  line-height: 1.2;
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.1;
   color: var(--ivory);
-  margin-top: 6px;
+  margin-top: 8px;
   margin-bottom: 18px;
 }
 .title em { color: var(--champ-l); font-style: italic; }
@@ -27,34 +32,43 @@
   font-size: 14px;
   color: var(--muted);
   line-height: 1.8;
-  max-width: 520px;
   margin-bottom: 28px;
 }
 
-/* Inline contact details, separated by thin vertical dividers */
-.details {
+.trustList {
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
+}
+.trustItem {
+  display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  gap: 12px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ivory);
+  padding: 11px 14px;
+  border: 1px solid var(--bs);
+  background: rgba(255, 255, 255, 0.035);
 }
-.detail {
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.detail:not(:last-child)::after {
+.trustItem::before {
   content: '';
-  display: inline-block;
-  width: 1px;
-  height: 11px;
-  background: var(--bs);
-  margin: 0 16px;
-  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--champ);
+  flex-shrink: 0;
 }
 
-/* Two-column form grid */
+/* ── Right column — premium dark form panel ── */
+.formPanel {
+  background: var(--slate2);
+  border: 1px solid var(--bs);
+  border-top: 2px solid var(--bc);
+  padding: 40px;
+}
+
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -75,7 +89,7 @@
   color: var(--ivory);
   font-family: var(--font-sans);
   font-size: 14px;
-  padding: 11px 14px;
+  padding: 12px 14px;
   outline: none;
   transition: border-color var(--t-fast);
 }
@@ -104,12 +118,14 @@
   line-height: 1.5;
 }
 
+/* ── Mobile: stack copy over the form panel ── */
 @media (max-width: 960px) {
-  .panel { padding: 40px 24px; }
-  .title { font-size: 26px; }
-  .form  { grid-template-columns: 1fr; }
-  /* Single contact detail (email only) — hide the rest and the dividers */
-  .detail:nth-child(2),
-  .detail:nth-child(3) { display: none; }
-  .detail:not(:last-child)::after { display: none; }
+  .inner {
+    display: block;
+    padding: 64px 24px;
+  }
+  .copy { max-width: none; }
+  .title { font-size: clamp(32px, 9vw, 44px); line-height: 0.95; }
+  .formPanel { margin-top: 28px; padding: 22px 18px; }
+  .form { grid-template-columns: 1fr; }
 }
