@@ -1,0 +1,12 @@
+{
+  "name": "Crescivo",
+  "short_name": "Crescivo",
+  "description": "Revenue Architecture™ for B2B scale-ups. Scale beyond the founder.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0F18",
+  "theme_color": "#0A0F18",
+  "icons": [
+    { "src": "/images/crescivo-logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

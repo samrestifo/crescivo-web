@@ -1,0 +1,5 @@
+# Crescivo — https://www.crescivo.partners
+User-agent: *
+Allow: /
+
+Sitemap: https://www.crescivo.partners/sitemap.xml

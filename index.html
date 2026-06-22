@@ -1,23 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta -->
-    <title>Crescivo — Scale Beyond the Founder</title>
-    <meta name="description" content="Revenue Architecture™ for B2B scale-ups with proven product-market fit. Crescivo helps founder-led companies build repeatable enterprise growth beyond founder dependency." />
+    <title>Revenue Architecture™ for B2B Scale-Ups | Crescivo</title>
+    <meta
+      name="description"
+      content="Crescivo installs Revenue Architecture™ for founder-led B2B scale-ups — commercial architecture, sales and GTM leadership, operating cadence and ecosystem leverage. Scale beyond the founder."
+    />
     <meta name="theme-color" content="#0A0F18" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://www.crescivo.partners/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://crescivo.partners/" />
+    <meta property="og:site_name" content="Crescivo" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://www.crescivo.partners/" />
     <meta property="og:title" content="Crescivo — Scale Beyond the Founder" />
-    <meta property="og:description" content="Revenue Architecture™ for B2B scale-ups with proven product-market fit. Crescivo helps founder-led companies build repeatable enterprise growth beyond founder dependency." />
-    <meta property="og:image" content="/images/hero-mountain-desktop.webp" />
+    <meta
+      property="og:description"
+      content="Revenue Architecture™ for B2B scale-ups with proven product-market fit. Move from founder dependency to repeatable enterprise growth."
+    />
+    <meta property="og:image" content="https://www.crescivo.partners/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Crescivo — Revenue Architecture™. Scale Beyond the Founder." />
 
-    <!-- Favicon -->
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Crescivo — Scale Beyond the Founder" />
+    <meta
+      name="twitter:description"
+      content="Revenue Architecture™ for B2B scale-ups with proven product-market fit."
+    />
+    <meta name="twitter:image" content="https://www.crescivo.partners/og-image.png" />
+
+    <!-- Icons -->
     <link rel="icon" type="image/png" href="/images/crescivo-logo.png" />
+    <link rel="apple-touch-icon" href="/images/crescivo-logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Structured data: Organization + WebSite + ProfessionalService -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.crescivo.partners/#org",
+          "name": "Crescivo",
+          "url": "https://www.crescivo.partners/",
+          "logo": "https://www.crescivo.partners/images/crescivo-logo.png",
+          "description": "Revenue Architecture™ for B2B scale-ups with proven product-market fit. Crescivo installs the commercial architecture, sales and GTM leadership rhythm, operating cadence and ecosystem leverage that lets founder-led companies scale beyond the founder.",
+          "founder": [
+            { "@type": "Person", "name": "Sam Restifo" },
+            { "@type": "Person", "name": "Guy Pozniak" },
+            { "@type": "Person", "name": "Jason Serda" }
+          ],
+          "areaServed": "AU",
+          "sameAs": ["https://www.linkedin.com/company/crescivo-partners"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.crescivo.partners/#website",
+          "name": "Crescivo",
+          "url": "https://www.crescivo.partners/",
+          "publisher": { "@id": "https://www.crescivo.partners/#org" },
+          "inLanguage": "en-AU"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.crescivo.partners/#service",
+          "name": "Crescivo — Revenue Architecture™",
+          "url": "https://www.crescivo.partners/",
+          "parentOrganization": { "@id": "https://www.crescivo.partners/#org" },
+          "areaServed": "AU",
+          "serviceType": "Revenue Architecture for founder-led B2B scale-ups",
+          "description": "Embedded growth operators who install Revenue Architecture™ — architecture, leadership, operations and ecosystem — so founder-led B2B scale-ups achieve repeatable enterprise growth."
+        }
+      ]
+    }
+    </script>
 
     <!-- Preconnect for fonts — non-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,22 +95,9 @@
       rel="stylesheet"
     />
 
-    <!-- Preload hero images — browser picks correct one via media query.
-         This prevents LCP delay on both desktop and mobile. -->
-    <link
-      rel="preload"
-      href="/images/hero-mountain-desktop.webp"
-      as="image"
-      type="image/webp"
-      media="(min-width: 961px)"
-    />
-    <link
-      rel="preload"
-      href="/images/hero-mountain-mobile.webp"
-      as="image"
-      type="image/webp"
-      media="(max-width: 960px)"
-    />
+    <!-- Preload hero images — browser picks correct one via media query. -->
+    <link rel="preload" href="/images/hero-mountain-desktop.webp" as="image" type="image/webp" media="(min-width: 961px)" />
+    <link rel="preload" href="/images/hero-mountain-mobile.webp" as="image" type="image/webp" media="(max-width: 960px)" />
   </head>
   <body>
     <div id="root"></div>
