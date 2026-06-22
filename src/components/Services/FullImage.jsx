@@ -4,9 +4,8 @@ export default function FullImage() {
     <div className={`${styles.wrap} reveal`}>
       <img
         src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80&fit=crop&crop=center"
-        alt=""
+        alt="Mountain summit above the clouds at dawn"
         loading="lazy"
-        aria-hidden="true"
         width={1600}
         height={440}
       />

@@ -7,7 +7,7 @@ const METRICS = [
 export default function MetricsBand() {
   return (
     <div className={styles.wrap}>
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80&fit=crop" alt="" loading="lazy" aria-hidden="true" width={1600} height={320}/>
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80&fit=crop" alt="Mountain ridgeline at dawn" loading="lazy" width={1600} height={320}/>
       <div className={styles.overlay}/>
       <div className={styles.inner}>
         <div className={styles.grid}>
