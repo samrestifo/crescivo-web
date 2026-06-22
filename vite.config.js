@@ -10,20 +10,18 @@ export default defineConfig({
     compression({ algorithm: 'brotliCompress', ext: '.br' }),
   ],
   build: {
-    // Code split — each component chunk loaded only when needed
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
+        // Function form (not array) so the SSR prerender build doesn't fail
+        // when react/react-dom are externalised. Keeps vendor-splitting on client.
+        manualChunks(id) {
+          if (id.includes('node_modules')) return 'vendor'
         },
       },
     },
-    // Warn if any chunk exceeds 300KB
     chunkSizeWarningLimit: 300,
-    // Asset inlining threshold — anything under 4KB inlined, above is a separate file
     assetsInlineLimit: 4096,
   },
-  // Optimise deps on dev server startup
   optimizeDeps: {
     include: ['react', 'react-dom'],
   },
