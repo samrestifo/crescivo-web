@@ -3,8 +3,8 @@ import styles from './Hero.module.css'
 
 const CAPS = [
   {
-    label: 'Revenue Architecture',
-    desc: 'Commercial systems designed to remove founder dependency and create repeatable growth.',
+    label: 'Architecture',
+    desc: 'Clarify where you win, why you win and how growth should repeat.',
     icon: (
       <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="14" cy="14" r="2.5" fill="var(--champ)" stroke="none"/>
@@ -22,8 +22,8 @@ const CAPS = [
     ),
   },
   {
-    label: 'Operating Cadence',
-    desc: 'Weekly leadership rhythm, pipeline discipline and board-ready revenue visibility.',
+    label: 'Leadership',
+    desc: 'Install the sales and GTM leadership rhythm required for founder autonomy.',
     icon: (
       <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="14,2 16.5,5 14,8 11.5,5" fill="var(--champ)" stroke="none"/>
@@ -35,8 +35,8 @@ const CAPS = [
     ),
   },
   {
-    label: 'Ecosystem Leverage',
-    desc: 'Partner and alliance motions that multiply reach without multiplying headcount.',
+    label: 'Operations',
+    desc: 'Build the cadence, governance and visibility required for predictable growth.',
     icon: (
       <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="3"  cy="9" r="1.6" fill="var(--champ)" stroke="none"/>
@@ -52,8 +52,8 @@ const CAPS = [
     ),
   },
   {
-    label: 'Founder Autonomy',
-    desc: 'Build a company that grows without the founder in every deal, decision and relationship.',
+    label: 'Ecosystem',
+    desc: 'Create leverage through partners, alliances and strategic influence.',
     icon: (
       <svg viewBox="0 0 28 28" fill="none" stroke="var(--champ)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <line x1="4" y1="24" x2="24" y2="24"/>
@@ -112,10 +112,10 @@ export default function Hero() {
         </h1>
         <div className={styles.divider} />
         <p className={styles.sub}>
-          Revenue Architecture™ for B2B scale-ups with proven product-market fit.
+          The Crescivo Scale System for B2B scale-ups with proven product-market fit.
         </p>
         <p className={styles.sub}>
-          Every successful founder eventually reaches the same inflection point. The product works. Customers are buying. The team is growing. But revenue still depends on the founder. Crescivo builds the commercial architecture that changes that.
+          Every successful founder eventually reaches the same inflection point. The product works. Customers are buying. The team is growing. But growth still depends on the founder. Crescivo builds the commercial system that changes that.
         </p>
       </div>
 
@@ -146,11 +146,13 @@ export default function Hero() {
         {/* Desktop footer bar */}
         <div className={styles.footerBar}>
           <div className={styles.tagline}>
-            <span>Revenue Architecture</span>
+            <span>Architecture</span>
             <span className={styles.sep} />
-            <span>Founder Autonomy</span>
+            <span>Leadership</span>
             <span className={styles.sep} />
-            <span className={styles.accent}>Repeatable Growth</span>
+            <span>Operations</span>
+            <span className={styles.sep} />
+            <span className={styles.accent}>Ecosystem</span>
           </div>
           <div className={styles.actions}>
             <a href="#diagnostic" className="btn-primary">
@@ -165,11 +167,13 @@ export default function Hero() {
         {/* Mobile CTA */}
         <div className={styles.mobileCta}>
           <div className={styles.mobileTagline}>
-            <span>Revenue Architecture.</span>
+            <span>Architecture</span>
             <span className={styles.sep} />
-            <span>Founder Autonomy.</span>
+            <span>Leadership</span>
             <span className={styles.sep} />
-            <span className={styles.accent}>Repeatable Growth.</span>
+            <span>Operations</span>
+            <span className={styles.sep} />
+            <span className={styles.accent}>Ecosystem</span>
           </div>
           <a href="#contact" className={styles.mobileCtaBtn}>
             Book a Growth Diagnostic →

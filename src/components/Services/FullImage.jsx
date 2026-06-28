@@ -12,7 +12,7 @@ export default function FullImage() {
       <div className={styles.overlay} />
       <div className={styles.text}>
         <blockquote className={styles.quote}>
-          "Revenue is the output.<br /><em>Architecture is the input."</em>
+          "Growth is the output.<br /><em>The system is the input."</em>
         </blockquote>
         <cite className={styles.attr}>Crescivo — Scale Beyond the Founder.</cite>
       </div>

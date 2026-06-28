@@ -14,7 +14,7 @@
 - **Repo:** `samrestifo/crescivo-web` (default branch: `main`)
 - **Stack:** React 18 + Vite 5, CSS Modules (scoped per component), plain CSS design tokens
 - **Deployment:** Vercel — auto-deploy on push to `main`
-- **Purpose:** Premium website and client-facing brand platform for Crescivo's **Revenue Architecture™** offering
+- **Purpose:** Premium website and client-facing brand platform for the **Crescivo Scale System** offering
 - **Founding / operator team:** Sam Restifo, Guy Pozniak and Jason Serda
 - **Notable deps:** `react`, `react-dom`, `react-router-dom` (present, but the current site is a single-page section stack with anchor navigation — router is not the primary structure), `vite`, `@vitejs/plugin-react`, `vite-plugin-compression` (gzip + brotli)
 
@@ -22,12 +22,23 @@
 
 ## 2. Core Brand Positioning
 
+**Hierarchy (in order):**
+
+1. **Brand promise:** Scale Beyond the Founder.
+2. **Branded method:** Crescivo Scale System.
+3. **Four growth levers:** Architecture, Leadership, Operations, Ecosystem.
+4. **Outcome:** Founder Autonomy + Repeatable Enterprise Growth.
+
 - **Brand promise:** Scale Beyond the Founder.
-- **Methodology / mechanism:** Revenue Architecture™
+- **Methodology / mechanism:** the **Crescivo Scale System** (the owned, distinctive method). "Revenue architecture" / "commercial architecture" are used **descriptively only** — never positioned as the primary owned Crescivo methodology, and Crescivo does **not** claim to have invented "Revenue Architecture".
 - **Audience:** founder-led B2B scale-ups with proven product-market fit
-- **Preferred positioning line:** *Revenue Architecture™ for B2B scale-ups with proven product-market fit.*
+- **Preferred positioning line:** *The Crescivo Scale System helps founder-led B2B scale-ups move from founder dependency to repeatable enterprise growth.*
+- **Short supporting line:** *Architecture. Leadership. Operations. Ecosystem.*
+- **Outcome line:** *Founder Autonomy. Repeatable Enterprise Growth.*
+- **Hero subheadline:** *The Crescivo Scale System for B2B scale-ups with proven product-market fit.*
 - **Core belief:** The founder is not the problem. The founder built the business. Crescivo builds the commercial architecture, sales and GTM leadership rhythm, operating cadence and ecosystem leverage that allows the company to scale beyond the founder.
-- **Category:** Premium embedded growth operators / Revenue Architecture™ partners — **not** generic consultants, not a fractional-CRO marketplace, not a pitch-deck agency.
+- **Category:** Premium embedded growth operators running the Crescivo Scale System — **not** generic consultants, not a fractional-CRO marketplace, not a pitch-deck agency.
+- **Trademark note:** Use exactly `Crescivo Scale System` — **never** with ™, TM, or (TM). `Growth Diagnostic™` and `Commercial Blueprint™` keep their ™.
 
 ---
 
@@ -52,11 +63,15 @@ Crescivo is led by **three** co-founder/operators:
 ## 4. Messaging Rules
 
 **Use:**
-Scale Beyond the Founder · Revenue Architecture™ · Founder dependency · Founder autonomy ·
+Scale Beyond the Founder · Crescivo Scale System · Founder dependency · Founder autonomy ·
 Founder Ceiling · Commercial architecture · Sales and GTM leadership · Operating cadence ·
-Embedded execution · Repeatable enterprise growth · Board-ready revenue visibility ·
+Embedded execution · Repeatable enterprise growth · Board-ready growth visibility ·
 Ecosystem leverage · Growth Diagnostic™ · Commercial Blueprint™ · Partner ecosystem ·
-Leadership rhythm · Revenue operating system
+Leadership rhythm · Architecture · Leadership · Operations · Ecosystem
+
+> "Revenue architecture" / "commercial architecture" may be used **descriptively** where the
+> concept is needed, but the owned method is the **Crescivo Scale System**. Never write
+> `Crescivo Scale System™` / `Crescivo Scale System TM` / `Crescivo Scale System (TM)`.
 
 **Avoid:**
 "Ecosystem Growth Advisory" · "Growth Beyond the Founder" (old headline) ·
@@ -77,12 +92,12 @@ Founder-led growth is an advantage early. The founder knows the customer, shapes
 opens the doors and closes the deals. But once product-market fit is proven, founder-led growth
 can become the ceiling. The business starts depending on the founder for every major deal,
 decision and relationship. More leads, more hires and more activity will not fix a missing
-commercial operating system. Crescivo builds **Revenue Architecture™** — connecting architecture,
-leadership, operations and ecosystem — then **embeds** to turn the architecture into operating
+commercial operating system. Crescivo applies the **Crescivo Scale System** — connecting architecture,
+leadership, operations and ecosystem — then **embeds** to turn the system into operating
 cadence. The outcome is **founder autonomy and repeatable enterprise growth**.
 
 **Shorthand:**
-`Founder dependency → Founder Ceiling → Revenue Architecture™ → Embedded Execution → Founder Autonomy → Repeatable Enterprise Growth`
+`Founder dependency → Founder Ceiling → Crescivo Scale System → Embedded Execution → Founder Autonomy → Repeatable Enterprise Growth`
 
 ---
 
@@ -119,7 +134,7 @@ SaaS styling), no box-shadows unless explicitly requested.
 
 **Entry / structure**
 
-- `index.html` — title "Crescivo — Scale Beyond the Founder"; meta + OG describe Revenue Architecture™; preloads hero WebP (desktop ≥961px / mobile ≤960px); loads Playfair Display + Jost.
+- `index.html` — title "Crescivo — Scale Beyond the Founder"; meta + OG describe the Crescivo Scale System; preloads hero WebP (desktop ≥961px / mobile ≤960px); loads Playfair Display + Jost.
 - `src/main.jsx` — React entry; imports `styles/global.css`.
 - `src/App.jsx` — renders `Nav` + `Hero` eagerly, then **lazy-loads** below-fold sections inside `<Suspense>`, then `Footer`. Render order: Nav → Hero → Problem → ImageSplit → Services → FullImage → Diagnostic → Cadenza → Results → MetricsBand → About → Contact → Footer.
 - `src/hooks/useReveal.js` — IntersectionObserver **+ MutationObserver** so lazy-mounted `.reveal` elements still animate in (do not regress this — it's what stops below-fold sections rendering blank).
@@ -132,19 +147,19 @@ SaaS styling), no box-shadows unless explicitly requested.
 
 | Component | File / CSS module | Purpose | Copy & design notes | Mobile behaviour | Pitch/proposal source |
 |---|---|---|---|---|---|
-| **Nav** | `Nav/Nav.jsx` · `Nav.module.css` | Fixed top nav + mobile drawer | Wordmark "CRESCIVO" (champagne C) + subtitle "Revenue Architecture™". Links → labels/targets: **Revenue Architecture**→`#services`, **Diagnostic**→`#diagnostic`, **Outcomes**→`#results`, **Operators**→`#about-team`. Transparent → `rgba(10,15,24,.96)`+blur on scroll. | Hamburger button → full-screen `translateX` drawer with `×` close, Playfair links; body scroll lock; logo 42px. | No |
-| **Hero** | `Hero/Hero.jsx` · `Hero.module.css` | Cover / value prop | H1 "Scale Beyond / *the Founder.*"; sub = positioning line + supporting paragraph; 4 capability tiles (Revenue Architecture, Operating Cadence, Ecosystem Leverage, Founder Autonomy) with inline SVG icons; desktop footer bar tagline "Revenue Architecture · Founder Autonomy · Repeatable Growth" + CTAs "Book a Growth Diagnostic" / "Explore the Method". | Image as full dimmed background (see §8). Desktop parallax only (`matchMedia min-width:768px`); disabled on mobile. | Yes (Cover, value prop) |
+| **Nav** | `Nav/Nav.jsx` · `Nav.module.css` | Fixed top nav + mobile drawer | Wordmark "CRESCIVO" (champagne C) + subtitle "Crescivo Scale System". Links → labels/targets: **Crescivo Scale System**→`#services`, **Diagnostic**→`#diagnostic`, **Outcomes**→`#results`, **Operators**→`#about-team`. Transparent → `rgba(10,15,24,.96)`+blur on scroll. | Hamburger button → full-screen `translateX` drawer with `×` close, Playfair links; body scroll lock; logo 42px. | No |
+| **Hero** | `Hero/Hero.jsx` · `Hero.module.css` | Cover / value prop | H1 "Scale Beyond / *the Founder.*"; sub = positioning line ("The Crescivo Scale System for B2B scale-ups…") + supporting paragraph; 4 capability tiles (Architecture, Leadership, Operations, Ecosystem) with inline SVG icons; desktop footer bar tagline "Architecture · Leadership · Operations · Ecosystem" + CTAs "Book a Growth Diagnostic" / "Explore the Method". | Image as full dimmed background (see §8). Desktop parallax only (`matchMedia min-width:768px`); disabled on mobile. | Yes (Cover, value prop) |
 | **Problem** (Founder Ceiling) | `Problem/Problem.jsx` · `Problem.module.css` | The problem framing | Eyebrow "The Founder Ceiling"; H2 "Product-market fit is proven. / *Founder-led growth is the ceiling.*"; 4 numbered cells. Ghost numerals in teal-l `rgba(61,184,159,.25)`. `id="problem"`. | Grid → 1 column. | Yes (Founder Ceiling / Why growth stalls) |
-| **ImageSplit** | `Services/ImageSplit.jsx` · `ImageSplit.module.css` | Image+text bridge before Services | Eyebrow "What We Build"; "The commercial architecture your scale-up is missing."; CTA "Explore Revenue Architecture". Uses global `.img-split`. | Image panel hidden, text panel full-width (scoped via `.root :global(.img-panel)`). | Maybe |
-| **Services** (Revenue Architecture) | `Services/Services.jsx` · `Services.module.css` | The four growth levers | Eyebrow "Revenue Architecture™"; H2 "One operating system. / *Four growth levers.*". **Four tiles, desktop 2×2 grid** (see §9). `id="services"`. | Grid → 1 column; tags hidden. | Yes (Four Growth Levers) |
-| **FullImage** | `Services/FullImage.jsx` · `FullImage.module.css` | Full-bleed quote band | Quote "Revenue is the output. / *Architecture is the input.*"; caption "Crescivo — Scale Beyond the Founder." | Reduced height; tighter padding. | Yes (Revenue Architecture motif) |
+| **ImageSplit** | `Services/ImageSplit.jsx` · `ImageSplit.module.css` | Image+text bridge before Services | Eyebrow "What We Build"; "The commercial architecture your scale-up is missing."; CTA "Explore the Crescivo Scale System". Uses global `.img-split`. | Image panel hidden, text panel full-width (scoped via `.root :global(.img-panel)`). | Maybe |
+| **Services** (Crescivo Scale System) | `Services/Services.jsx` · `Services.module.css` | The four growth levers | Eyebrow "Crescivo Scale System"; H2 "One scale system. / *Four growth levers.*". **Four tiles, desktop 2×2 grid** (see §9). `id="services"`. | Grid → 1 column; tags hidden. | Yes (Four Growth Levers) |
+| **FullImage** | `Services/FullImage.jsx` · `FullImage.module.css` | Full-bleed quote band | Quote "Growth is the output. / *The system is the input.*"; caption "Crescivo — Scale Beyond the Founder." | Reduced height; tighter padding. | Yes (Scale System motif) |
 | **Diagnostic** (Growth Diagnostic™) | `Diagnostic/Diagnostic.jsx` · `Diagnostic.module.css` | Entry-point offer | Eyebrow "The Entry Point"; H2 "The Growth / *Diagnostic™*"; fee label "Fixed fee · 3 weeks"; 13 deliverables grid (see §10); CTA "Book a Growth Diagnostic". `id="diagnostic"`. | Single column; deliverables grid hidden. | Yes (Growth Diagnostic™) |
 | **Cadenza** (Embedded Execution) | `Cadenza/Cadenza.jsx` · `Cadenza.module.css` | Embedded retainer | Eyebrow "Embedded Execution"; quote "The founder built the business. / *Now the business needs to scale beyond the founder.*"; **interactive accordion** (see §11); CTA "Discuss Embedded Execution". `id="cadenza"`. Component **named Cadenza internally**, public concept = Embedded Execution. | Panel gutter tightened to 24px; accordion rows full-width tap targets; +/− indicator inset from right. | Yes (Embedded Execution) |
 | **Results** (Outcomes) | `Results/Results.jsx` · `Results.module.css` | Case study | Badge "◈ B2B Scale-up · Enterprise Growth Motion"; "$0 to $4M ARR / in 24 months."; 3 stat columns; "Reference available on request". `id="results"`. | Band → 1 column; only first stat shown; `statN` 36px. | Yes (Outcomes) |
 | **MetricsBand** | `Results/MetricsBand.jsx` · `MetricsBand.module.css` | Illustrative metrics strip | $4M ARR · +38% pipeline velocity · 3× ecosystem leverage; "Illustrative · modelled composites". | Hidden entirely on mobile. | Yes (Outcomes support) |
 | **About** (Operators) | `About/About.jsx` · `About.module.css` | Who we are | Eyebrow "Who We Are"; manifesto "Operators who've built it, / broken it and *scaled it.*"; **3-founder** body (Sam, Guy, Jason — see §3); credentials list; pull-quote "We don't replace founders. We multiply them." `id="about-team"`. | Image panel hidden; text full-width; credentials list hidden. | Yes (Who We Are) |
 | **Contact** | `Contact/Contact.jsx` · `Contact.module.css` | Conversion enquiry | 2-column: left copy + 3 trust points, right premium dark form panel (see §12). `id="contact"`. | Stacks: copy → trust points → full-width form panel; full-width submit. | Yes (Next Step) |
-| **Footer** | `Footer/Footer.jsx` · `Footer.module.css` | Footer | Logo lockup + subtitle "Revenue Architecture™"; links (Revenue Architecture/Diagnostic/Outcomes/Contact); legal "© 2026 Crescivo · crescivo.partners · Scale Beyond the Founder." | Column, centered; links hidden; logo kept as one lockup (see §13). | No |
+| **Footer** | `Footer/Footer.jsx` · `Footer.module.css` | Footer | Logo lockup + subtitle "Crescivo Scale System"; links (Crescivo Scale System/Diagnostic/Outcomes/Contact); legal "© 2026 Crescivo · crescivo.partners · Scale Beyond the Founder." | Column, centered; links hidden; logo kept as one lockup (see §13). | No |
 
 ---
 
@@ -174,9 +189,11 @@ SaaS styling), no box-shadows unless explicitly requested.
 
 ---
 
-## 9. Revenue Architecture Section (Services)
+## 9. Crescivo Scale System Section (Services)
 
-**Headline:** One operating system. Four growth levers.
+**Eyebrow:** Crescivo Scale System
+**Headline:** One scale system. Four growth levers.
+**Intro:** The Crescivo Scale System helps founder-led scale-ups move from founder dependency to repeatable enterprise growth across four connected levers.
 **Must show four tiles in this exact order (Leadership second). Desktop = 2×2 grid; mobile = single column.**
 
 1. **Architecture** — *ICP, Positioning & Commercial Design*
@@ -200,14 +217,14 @@ SaaS styling), no box-shadows unless explicitly requested.
 ## 10. Growth Diagnostic Section
 
 **Growth Diagnostic™ is the entry point.** Frame as: fixed fee · 3 weeks · board-ready
-Revenue Architecture™ blueprint · diagnostic before prescription · maps constraints,
-dependencies and opportunities inside the current commercial motion.
+Crescivo Scale System blueprint · diagnostic before prescription · maps where growth is still
+founder-dependent and the constraints, dependencies and opportunities inside the current commercial motion.
 
 **Deliverables (13):**
-Founder Dependency Score · Revenue Architecture Review · ICP Clarity Assessment ·
+Founder Dependency Score · Crescivo Scale System Review · ICP Clarity Assessment ·
 Positioning & Messaging Audit · GTM Motion Review · Sales Process Review · Pipeline Health Score ·
 Forecast Confidence Review · Partner Ecosystem Map · Leadership Cadence Review ·
-Team Capability Assessment · KPI Framework Design · 90-Day Revenue Blueprint
+Team Capability Assessment · KPI Framework Design · 90-Day Scale Blueprint
 
 > Implementation: `Diagnostic/Diagnostic.jsx` `DELIVERABLES` array; fee shown via `.feeLabel`
 > ("Fixed fee · 3 weeks"); no dollar price in the live site.
@@ -228,7 +245,7 @@ Team Capability Assessment · KPI Framework Design · 90-Day Revenue Blueprint
 
 1. *Embedded execution, not advisory deliverables* — We work inside the operating rhythm of the business — turning commercial priorities into weekly action, not static recommendations.
 2. *Weekly cadence with your leadership team* — We create the leadership rhythm for pipeline, priorities, decisions and accountability so growth becomes managed, not improvised.
-3. *Board-ready revenue visibility* — We translate commercial activity into clear executive reporting across pipeline, forecast confidence, partner leverage and growth constraints.
+3. *Board-ready growth visibility* — We translate commercial activity into clear executive reporting across pipeline, forecast confidence, partner leverage and growth constraints.
 4. *Pipeline, partner and leadership governance* — We install the governance required to scale sales, GTM leadership and ecosystem execution without everything reverting to the founder.
 5. *Designed to create founder autonomy* — The goal is not long-term dependency on Crescivo. The goal is a commercial system that lets the company scale beyond the founder.
 
@@ -293,12 +310,12 @@ Future Crescivo pitch material should use the **website + this file** as the sou
 
 **Recommended 12-slide structure:**
 
-1. **Cover** — Title: *Scale Beyond the Founder.* / Subtitle: *Revenue Architecture™ for B2B scale-ups with proven product-market fit.*
+1. **Cover** — Title: *Scale Beyond the Founder.* / Subtitle: *The Crescivo Scale System for B2B scale-ups with proven product-market fit.*
 2. **The Founder Ceiling** — Founder-led growth is the advantage — until it becomes the constraint.
 3. **Why Growth Stalls** — Most scale-ups do not have a lead problem. They have a founder dependency problem.
-4. **Revenue Architecture™** — Revenue is the output. Architecture is the input.
+4. **The Crescivo Scale System** — Growth is the output. The system is the input.
 5. **Four Growth Levers** — Architecture, Leadership, Operations, Ecosystem.
-6. **Growth Diagnostic™** — Three weeks. Fixed fee. Board-ready Revenue Architecture™ blueprint.
+6. **Growth Diagnostic™** — Three weeks. Fixed fee. Board-ready Crescivo Scale System blueprint.
 7. **Embedded Execution** — We do not deliver strategy decks. We install operating cadence.
 8. **Outcomes** — Proof metrics / case studies. Minimal and executive.
 9. **Proposed Engagement** — Diagnostic → Blueprint → Embedded execution → Autonomy.
@@ -316,7 +333,7 @@ PowerPoint** · do not flatten important text inside images/SVGs.
 
 **Recommended structure:**
 1. Cover · 2. Executive Summary · 3. Current Situation / Founder Dependency · 4. Founder Ceiling ·
-5. Revenue Architecture™ Approach · 6. Four Growth Levers · 7. Growth Diagnostic™ Scope ·
+5. Crescivo Scale System Approach · 6. Four Growth Levers · 7. Growth Diagnostic™ Scope ·
 8. Embedded Execution Scope · 9. Deliverables · 10. Timeline and Governance · 11. Commercials · 12. Next Steps
 
 **Tone:** direct · premium · commercial · board-ready · specific to client context · avoid generic consultancy language.
@@ -357,7 +374,8 @@ when regenerating.
 
 - Mobile hero refined so the image appears behind the heading while cards/CTA sit on a controlled dark panel.
 - Mobile hero tightened so the CTA and 30-minute note land within the first screen (`.main` margin-top clamp iterated to `200px / 31vh / 300px`; image framed via `translateY(-30%)` + `background-position: center 58%`).
-- Revenue Architecture section now shows **four** growth levers, with **Leadership second** (desktop 2×2).
+- Primary methodology renamed from "Revenue Architecture™" to the **Crescivo Scale System** (no ™) across site copy, meta and docs; "commercial / revenue architecture" retained only as descriptive language. Brand promise "Scale Beyond the Founder" preserved.
+- Crescivo Scale System section (Services) shows **four** growth levers, with **Leadership second** (desktop 2×2).
 - Embedded Execution converted from a static bullet list to an accessible accordion.
 - Mobile accordion plus/minus indicator spacing corrected (inset from right edge).
 - Founder/operator references corrected to **three** co-founders (Sam Restifo, Guy Pozniak, Jason Serda).
@@ -383,4 +401,4 @@ When asked to update Crescivo:
 
 ---
 
-*Last reviewed: 2026-06-21. Keep this file updated when positioning, components, or workflows change.*
+*Last reviewed: 2026-06-28. Keep this file updated when positioning, components, or workflows change.*

@@ -19,12 +19,12 @@ export default function ImageSplit() {
           The commercial architecture your scale-up is missing.
         </h2>
         <p style={{fontSize:14,color:'var(--muted)',lineHeight:1.85,marginBottom:24}}>
-          Crescivo sits between the founder and the market. We design the revenue architecture, activate the operating cadence and build the ecosystem required for repeatable enterprise growth.
+          Crescivo sits between the founder and the market. We design the commercial architecture, activate the operating cadence and build the ecosystem required for repeatable enterprise growth.
         </p>
         <p style={{fontSize:14,color:'var(--muted)',lineHeight:1.85,marginBottom:36}}>
           We don't replace founders. We multiply them — then build the system that lets the company grow without depending on them.
         </p>
-        <a href="#services" className="btn-primary">Explore Revenue Architecture</a>
+        <a href="#services" className="btn-primary">Explore the Crescivo Scale System</a>
       </div>
     </div>
   )

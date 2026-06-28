@@ -17,7 +17,7 @@ export default function Problem() {
           <em>Founder-led growth is the ceiling.</em>
         </h2>
         <p className="sec-desc">
-          Most scale-ups don't stall because the product stops working. They stall because the commercial system still depends on the founder — their relationships, their instinct, their approvals and their presence in every important deal.
+          Most scale-ups don't stall because the product stops working. They stall because growth still depends on the founder — their relationships, their instinct, their approvals and their presence in every important deal.
         </p>
         <div className={`${styles.grid} reveal`}>
           {PROBLEMS.map(({ n, head, body }) => (

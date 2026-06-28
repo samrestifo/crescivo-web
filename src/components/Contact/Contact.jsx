@@ -34,7 +34,7 @@ export default function Contact() {
             Ready to scale <em>beyond the founder?</em>
           </h2>
           <p className={styles.sub}>
-            Tell us where growth still depends too heavily on the founder. If there is a fit, we'll map the commercial constraints and define the path toward repeatable enterprise growth.
+            Tell us where growth still depends too heavily on the founder. If there is a fit, we'll map the commercial constraints and define the path toward founder autonomy and repeatable enterprise growth.
           </p>
           <ul className={styles.trustList}>
             {TRUST.map(t => (

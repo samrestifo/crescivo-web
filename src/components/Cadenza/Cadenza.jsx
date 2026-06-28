@@ -11,7 +11,7 @@ const EXECUTION_ITEMS = [
     body: 'We create the leadership rhythm for pipeline, priorities, decisions and accountability so growth becomes managed, not improvised.',
   },
   {
-    title: 'Board-ready revenue visibility',
+    title: 'Board-ready growth visibility',
     body: 'We translate commercial activity into clear executive reporting across pipeline, forecast confidence, partner leverage and growth constraints.',
   },
   {
@@ -36,7 +36,7 @@ export default function Cadenza() {
           <em>Now the business needs to scale beyond the founder.</em>
         </blockquote>
         <p className={styles.body}>
-          Crescivo embeds alongside the leadership team to turn Revenue Architecture™ into operating rhythm. We work inside the business — building the cadence, systems and capability required for repeatable growth.
+          Crescivo embeds alongside the leadership team to turn the Crescivo Scale System into operating rhythm. We work inside the business — building the cadence, systems and capability required for repeatable growth.
         </p>
 
         <div className={styles.accordion}>

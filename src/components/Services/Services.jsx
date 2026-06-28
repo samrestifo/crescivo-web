@@ -27,10 +27,10 @@ export default function Services() {
   return (
     <section id="services">
       <div className="sec-inner" style={{paddingBottom:32}}>
-        <div className="eyebrow">Revenue Architecture™</div>
-        <h2 className="sec-h2">One operating system.<br /><em>Four growth levers.</em></h2>
+        <div className="eyebrow">Crescivo Scale System</div>
+        <h2 className="sec-h2">One scale system.<br /><em>Four growth levers.</em></h2>
         <p className="sec-desc" style={{marginBottom:0}}>
-          Everything we build answers one question: what has to exist for this business to scale beyond the founder?
+          The Crescivo Scale System helps founder-led scale-ups move from founder dependency to repeatable enterprise growth across four connected levers.
         </p>
       </div>
       <div className={styles.grid}>

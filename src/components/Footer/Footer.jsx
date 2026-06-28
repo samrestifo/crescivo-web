@@ -7,12 +7,12 @@ export default function Footer() {
         <img src="/images/crescivo-logo.png" alt="Crescivo" width={26} height={26} loading="lazy" />
         <div>
           <div className={styles.wm}><span className={styles.c}>C</span>RESCIVO</div>
-          <div className={styles.sub}>Revenue Architecture™</div>
+          <div className={styles.sub}>Crescivo Scale System</div>
         </div>
       </div>
       <ul className={styles.links}>
         {[
-          { label:'Revenue Architecture', href:'#services'   },
+          { label:'Crescivo Scale System', href:'#services'   },
           { label:'Diagnostic',           href:'#diagnostic' },
           { label:'Outcomes',             href:'#results'    },
           { label:'Contact',              href:'#contact'    },

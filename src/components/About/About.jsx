@@ -2,7 +2,7 @@ import styles from './About.module.css'
 
 const CREDS = [
   'Deep B2B scale-up, enterprise sales and GTM experience across AU/NZ and APAC',
-  'Revenue architecture across sales, partnerships, ecosystem and operating cadence',
+  'Commercial architecture across sales, partnerships, ecosystem and operating cadence',
   'Operator-led execution — embedded with leadership, not advising from a distance',
   'Commercial alignment through retained, success-based and selective equity structures',
 ]
@@ -29,7 +29,7 @@ export default function About() {
           Crescivo is led by Sam Restifo, Guy Pozniak and Jason Serda — three co-founder/operators who have built and sold significant businesses, led enterprise sales and GTM functions, activated partner ecosystems across Australia, APAC and international markets, and bring extensive executive network access.
         </p>
         <p className={styles.body}>
-          We work with B2B scale-ups that have proven product-market fit but are still too dependent on founder-led growth. Our role is to build the commercial architecture, rhythm and leverage that lets the business scale beyond the founder.
+          We work with B2B scale-ups that have proven product-market fit but are still too dependent on founder-led growth. Our role is to apply the Crescivo Scale System — across architecture, leadership, operations and ecosystem — to help the business scale beyond the founder.
         </p>
         <div className={styles.creds}>
           {CREDS.map(c => (
