@@ -115,7 +115,7 @@ export default function Hero() {
           The Crescivo Scale System for B2B scale-ups with proven product-market fit.
         </p>
         <p className={styles.sub}>
-          Every successful founder eventually reaches the same inflection point. The product works. Customers are buying. The team is growing. But growth still depends on the founder. Crescivo builds the commercial system that changes that.
+          Every successful founder eventually reaches the same inflection point. The product works. Customers are buying. The team is growing. But growth still depends on the founder. Crescivo helps build the architecture, leadership, operations and ecosystem that turn founder-led momentum into repeatable enterprise growth.
         </p>
       </div>
 
