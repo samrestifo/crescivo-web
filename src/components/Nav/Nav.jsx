@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import styles from './Nav.module.css'
 
 const LINKS = [
-  { href: '#services',   label: 'Crescivo Scale System' },
-  { href: '#diagnostic', label: 'Diagnostic'           },
-  { href: '#results',    label: 'Outcomes'             },
-  { href: '#about-team', label: 'Operators'            },
+  { href: '/#services',   label: 'Crescivo Scale System' },
+  { href: '/#diagnostic', label: 'Diagnostic'           },
+  { href: '/#results',    label: 'Outcomes'             },
+  { href: '/#about-team', label: 'Operators'            },
 ]
 
 function Wordmark() {
@@ -38,7 +38,7 @@ export default function Nav() {
   return (
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-        <a href="#" className={styles.logo} aria-label="Crescivo home">
+        <a href="/#top" className={styles.logo} aria-label="Crescivo home">
           <img
             src="/images/crescivo-logo.png"
             alt="Crescivo"

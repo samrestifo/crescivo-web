@@ -12,10 +12,10 @@ export default function Footer() {
       </div>
       <ul className={styles.links}>
         {[
-          { label:'Crescivo Scale System', href:'#services'   },
-          { label:'Diagnostic',           href:'#diagnostic' },
-          { label:'Outcomes',             href:'#results'    },
-          { label:'Contact',              href:'#contact'    },
+          { label:'Crescivo Scale System', href:'/#services'   },
+          { label:'Diagnostic',           href:'/#diagnostic' },
+          { label:'Outcomes',             href:'/#results'    },
+          { label:'Contact',              href:'/#contact'    },
         ].map(({ label, href }) => (
           <li key={href}><a href={href}>{label}</a></li>
         ))}
