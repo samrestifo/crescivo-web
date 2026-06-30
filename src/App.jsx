@@ -11,28 +11,50 @@ import MetricsBand from './components/Results/MetricsBand'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
+import Privacy from './components/Privacy/Privacy'
 import { useReveal } from './hooks/useReveal'
+import { useEffect, useState } from 'react'
+
+function Home() {
+  return (
+    <main>
+      <Hero />
+      <Problem />
+      <ImageSplit />
+      <Services />
+      <FullImage />
+      <Diagnostic />
+      <Cadenza />
+      <Results />
+      <MetricsBand />
+      <About />
+      <Contact />
+    </main>
+  )
+}
 
 export default function App() {
   useReveal()
+
+  // Lightweight client-side routing. Starts at '/' so the server-rendered
+  // (prerendered) markup matches the first client render — then syncs to the
+  // real pathname after mount. The Vercel rewrite (/(.*) → /index.html) serves
+  // this app for direct hits to /privacy.
+  const [path, setPath] = useState('/')
+  useEffect(() => {
+    const sync = () => setPath(window.location.pathname)
+    sync()
+    window.addEventListener('popstate', sync)
+    return () => window.removeEventListener('popstate', sync)
+  }, [])
+
+  const isPrivacy = path.replace(/\/+$/, '') === '/privacy'
 
   return (
     <>
       <div className="grain" aria-hidden="true" />
       <Nav />
-      <main>
-        <Hero />
-        <Problem />
-        <ImageSplit />
-        <Services />
-        <FullImage />
-        <Diagnostic />
-        <Cadenza />
-        <Results />
-        <MetricsBand />
-        <About />
-        <Contact />
-      </main>
+      {isPrivacy ? <Privacy /> : <Home />}
       <Footer />
     </>
   )

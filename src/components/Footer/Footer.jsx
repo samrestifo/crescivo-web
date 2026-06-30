@@ -22,6 +22,7 @@ export default function Footer() {
       </ul>
       <div className={styles.legal}>
         © 2026 Crescivo.&ensp;·&ensp;crescivo.partners&ensp;·&ensp;Scale Beyond the Founder.
+        &ensp;·&ensp;<a href="/privacy" className={styles.legalLink}>Privacy Policy</a>
       </div>
     </footer>
   )
