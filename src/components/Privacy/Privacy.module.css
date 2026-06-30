@@ -14,7 +14,7 @@
 
 /* ── Header ── */
 .header {
-  padding: calc(var(--nav-h) + var(--space-20)) 0 var(--space-12);
+  padding: calc(var(--nav-h) + var(--space-8)) 0 var(--space-12);
   background:
     radial-gradient(120% 140% at 80% -10%, rgba(200, 169, 110, 0.10) 0%, transparent 55%),
     linear-gradient(180deg, var(--bg-r) 0%, var(--ink) 100%);
@@ -207,7 +207,7 @@
   .inner { padding: 0 var(--space-6); }
 
   .header {
-    padding: calc(var(--nav-h) + var(--space-12)) 0 var(--space-10);
+    padding: calc(var(--nav-h) + var(--space-8)) 0 var(--space-10);
   }
 
   .body { padding: var(--space-12) 0 var(--space-16); }
