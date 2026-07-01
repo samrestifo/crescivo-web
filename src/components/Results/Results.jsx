@@ -1,28 +1,35 @@
 import styles from './Results.module.css'
 
+const METRICS = [
+  { n:'12',  l:'Strategic partners activated' },
+  { n:'22%', l:'Reduction in time to close' },
+  { n:'3×',  l:'Ecosystem leverage created' },
+]
+
 export default function Results() {
   return (
     <section id="results">
       <div className={`${styles.band} reveal`}>
-        <div className={styles.main}>
-          <div>
-            <div className={styles.badge}>◈ B2B Scale-up · Enterprise Growth Motion</div>
-            <div className={styles.result}><em>$0 to $4M ARR</em><br />in 24 months.</div>
-            <p className={styles.desc}>A founder-led B2B technology company had proven product-market fit, strong enterprise demand and a founder-dependent pipeline. We rebuilt the commercial foundation, activated the partner ecosystem and installed the operating cadence required to scale without the founders in every deal.</p>
-          </div>
-          <div className={styles.ref}>Reference available on request</div>
+        <div className={styles.story}>
+          <div className="eyebrow">Proof Pattern</div>
+          <h2 className={styles.headline}>From founder-led pipeline to <em>repeatable enterprise growth.</em></h2>
+          <p className={styles.desc}>A founder-led B2B technology company had product-market fit, strong enterprise demand and a pipeline still dependent on founder involvement. Crescivo rebuilt the commercial architecture, activated partner leverage and installed the operating cadence required to scale without the founder in every deal.</p>
+          <div className={styles.ref}>Illustrative composite based on real engagement patterns · References available on request</div>
         </div>
-        {[
-          { n:'$4M',   l:'ARR · 24 months',    d:'From zero commercial revenue at engagement start.' },
-          { n:'12',    l:'Strategic Partners',  d:'Activated across channel, alliance and enterprise routes.' },
-          { n:'−22%',  l:'Time to Close',       d:'Cycle compression through stage-gate discipline and executive alignment.' },
-        ].map(({ n, l, d }) => (
-          <div key={l} className={styles.stat}>
-            <div className={styles.statN}>{n}</div>
-            <div className={styles.statL}>{l}</div>
-            <div className={styles.statD}>{d}</div>
+        <div className={styles.proof}>
+          <div className={styles.primary}>
+            <div className={styles.primaryN}>$0 → $4M ARR</div>
+            <div className={styles.primaryL}>in 24 months</div>
           </div>
-        ))}
+          <div className={styles.metrics}>
+            {METRICS.map(({ n, l }) => (
+              <div key={l} className={styles.metric}>
+                <div className={styles.metricN}>{n}</div>
+                <div className={styles.metricL}>{l}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

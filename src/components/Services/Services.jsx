@@ -26,26 +26,28 @@ const SERVICES = [
 export default function Services() {
   return (
     <section id="services">
-      <div className="sec-inner" style={{paddingBottom:32}}>
-        <div className="eyebrow">Crescivo Scale System</div>
-        <h2 className="sec-h2">One scale system.<br /><em>Four growth levers.</em></h2>
-        <p className="sec-desc" style={{marginBottom:0}}>
-          The Crescivo Scale System helps founder-led scale-ups move from founder dependency to repeatable enterprise growth across four connected levers.
-        </p>
-      </div>
-      <div className={styles.grid}>
-        {SERVICES.map(({ n, eye, title, body, tags }, i) => (
-          <div key={n} className={`${styles.card} reveal reveal-d${i+1}`}>
-            <div className={styles.topBar} />
-            <div className={styles.num}>{n}</div>
-            <div className={styles.eye}>{eye}</div>
-            <div className={styles.title}>{title}</div>
-            <div className={styles.body}>{body}</div>
-            <div className={styles.tags}>
-              {tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
+      <div className={styles.inner}>
+        <div className={styles.head}>
+          <div className="eyebrow">Crescivo Scale System</div>
+          <h2 className="sec-h2">One scale system.<br /><em>Four growth levers.</em></h2>
+          <p className={styles.intro}>
+            The Crescivo Scale System helps founder-led scale-ups move from founder dependency to repeatable enterprise growth across four connected levers.
+          </p>
+        </div>
+        <div className={styles.grid}>
+          {SERVICES.map(({ n, eye, title, body, tags }, i) => (
+            <div key={n} className={`${styles.card} reveal reveal-d${i+1}`}>
+              <div className={styles.topBar} />
+              <div className={styles.num}>{n}</div>
+              <div className={styles.eye}>{eye}</div>
+              <div className={styles.title}>{title}</div>
+              <div className={styles.body}>{body}</div>
+              <div className={styles.tags}>
+                {tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

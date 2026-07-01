@@ -153,10 +153,10 @@ SaaS styling), no box-shadows unless explicitly requested.
 | **ImageSplit** | `Services/ImageSplit.jsx` · `ImageSplit.module.css` | Image+text bridge before Services | Eyebrow "What We Build"; "The commercial architecture your scale-up is missing."; CTA "Explore the Crescivo Scale System". Uses global `.img-split`. | Image panel hidden, text panel full-width (scoped via `.root :global(.img-panel)`). | Maybe |
 | **Services** (Crescivo Scale System) | `Services/Services.jsx` · `Services.module.css` | The four growth levers | Eyebrow "Crescivo Scale System"; H2 "One scale system. / *Four growth levers.*". **Four tiles, desktop 2×2 grid** (see §9). `id="services"`. | Grid → 1 column; tags hidden. | Yes (Four Growth Levers) |
 | **FullImage** | `Services/FullImage.jsx` · `FullImage.module.css` | Full-bleed quote band | Quote "Growth is the output. / *The system is the input.*"; caption "Crescivo — Scale Beyond the Founder." | Reduced height; tighter padding. | Yes (Scale System motif) |
-| **Diagnostic** (Growth Diagnostic™) | `Diagnostic/Diagnostic.jsx` · `Diagnostic.module.css` | Entry-point offer | Eyebrow "The Entry Point"; H2 "The Growth / *Diagnostic™*"; fee label "Fixed fee · 3 weeks"; 13 deliverables grid (see §10); CTA "Book a Growth Diagnostic". `id="diagnostic"`. | Single column; deliverables grid hidden. | Yes (Growth Diagnostic™) |
+| **Diagnostic** (Engagement Framework + Growth Diagnostic™) | `Diagnostic/Diagnostic.jsx` · `Diagnostic.module.css` | Engagement framework + entry-point offer | Intro eyebrow "The Engagement Framework"; H2 "Before we prescribe the work, / *we map the system.*"; three-step framework row (Whiteboard Session → Growth Diagnostic → Embedded Execution, see §10) with the Growth Diagnostic card emphasised ("Primary engagement"); then a Growth Diagnostic detail block — eyebrow "The Entry Point", H3 "The Growth *Diagnostic™*", fee label "Fixed fee · 3 weeks", 13 deliverables grid, CTA "Book a Growth Diagnostic" + supporting whiteboard note. `id="diagnostic"`. | Steps stack to 1 column; detail single column; deliverables grid hidden. | Yes (Growth Diagnostic™) |
 | **Cadenza** (Embedded Execution) | `Cadenza/Cadenza.jsx` · `Cadenza.module.css` | Embedded retainer | Eyebrow "Embedded Execution"; quote "The founder built the business. / *Now the business needs to scale beyond the founder.*"; **interactive accordion** (see §11); CTA "Discuss Embedded Execution". `id="cadenza"`. Component **named Cadenza internally**, public concept = Embedded Execution. | Panel gutter tightened to 24px; accordion rows full-width tap targets; +/− indicator inset from right. | Yes (Embedded Execution) |
-| **Results** (Outcomes) | `Results/Results.jsx` · `Results.module.css` | Case study | Badge "◈ B2B Scale-up · Enterprise Growth Motion"; "$0 to $4M ARR / in 24 months."; 3 stat columns; "Reference available on request". `id="results"`. | Band → 1 column; only first stat shown; `statN` 36px. | Yes (Outcomes) |
-| **MetricsBand** | `Results/MetricsBand.jsx` · `MetricsBand.module.css` | Illustrative metrics strip | $4M ARR · +38% pipeline velocity · 3× ecosystem leverage; "Illustrative · modelled composites". | Hidden entirely on mobile. | Yes (Outcomes support) |
+| **Results** (Proof Pattern / Outcomes) | `Results/Results.jsx` · `Results.module.css` | Single case-study proof block | Eyebrow "Proof Pattern"; H2 "From founder-led pipeline to *repeatable enterprise growth.*"; short narrative; illustrative/reference note. Split band — story panel (45%, `var(--slate2)`) + proof panel (55%, `var(--bg-r)`) with dominant `$0 → $4M ARR / in 24 months` and 3 compact secondary metrics (12 strategic partners · 22% reduction in time to close · 3× ecosystem leverage). **No duplicated metrics.** `id="results"`. | Band → 1 column: narrative first, then primary metric, then secondary metrics. | Yes (Outcomes) |
+| **MetricsBand** | `Results/MetricsBand.jsx` · `MetricsBand.module.css` | Atmospheric image band | Full-width mountain image + dark gradient only — **no metrics** (they now live once in the Results proof block). Calm visual breather between Results and About. | Hidden entirely on mobile. | Maybe (motif) |
 | **About** (Operators) | `About/About.jsx` · `About.module.css` | Who we are | Eyebrow "Who We Are"; manifesto "Operators who've built it, / broken it and *scaled it.*"; **3-founder** body (Sam, Guy, Jason — see §3); credentials list; pull-quote "We don't replace founders. We multiply them." `id="about-team"`. | Image panel hidden; text full-width; credentials list hidden. | Yes (Who We Are) |
 | **Contact** | `Contact/Contact.jsx` · `Contact.module.css` | Conversion enquiry | 2-column: left copy + 3 trust points, right premium dark form panel (see §12). `id="contact"`. | Stacks: copy → trust points → full-width form panel; full-width submit. | Yes (Next Step) |
 | **Footer** | `Footer/Footer.jsx` · `Footer.module.css` | Footer | Logo lockup + subtitle "Crescivo Scale System"; links (Crescivo Scale System/Diagnostic/Outcomes/Contact); legal "© 2026 Crescivo · crescivo.partners · Scale Beyond the Founder." | Column, centered; links hidden; logo kept as one lockup (see §13). | No |
@@ -214,9 +214,29 @@ SaaS styling), no box-shadows unless explicitly requested.
 
 ---
 
-## 10. Growth Diagnostic Section
+## 10. Diagnostic / Engagement Framework Section
 
-**Growth Diagnostic™ is the entry point.** Frame as: fixed fee · 3 weeks · board-ready
+**Core message:** *Before we prescribe the work, we map the system.* Crescivo does **not** jump
+straight into a diagnostic. The Diagnostic section now opens with a three-step engagement framework,
+then details the Growth Diagnostic as the paid entry point and primary CTA.
+
+**Engagement framework (3 steps, in this exact order):**
+
+1. **Whiteboard Session** — *alignment / scoping mechanism (not a separate product, not a nav item, not a paid offer).*
+   Align the outcome, current reality, founder dependency and guardrails so the work is visible before scope is agreed.
+   Use the label **"Whiteboard Session"** — do **not** overuse the word "workshop", and do **not** create a standalone Workshop offer or page.
+2. **Growth Diagnostic** — *the paid diagnostic / blueprint (the entry point and primary CTA).*
+   Validate the constraints across the Crescivo Scale System and convert them into a board-ready 90-Day Scale Blueprint.
+3. **Embedded Execution** — *implementation rhythm and capability build.*
+   Install the leadership rhythm, operating cadence and commercial system required for repeatable enterprise growth.
+
+> Implementation: `Diagnostic/Diagnostic.jsx` `STEPS` array (Whiteboard Session is Step 01,
+> Growth Diagnostic is Step 02 with a `tag: 'Primary engagement'` accent, Embedded Execution is Step 03);
+> `.steps` is a bordered 3-column card row (`1fr 1fr 1fr`, `gap:1px`, `background:var(--bs)`) that stacks
+> to 1 column on mobile. The active (Growth Diagnostic) card gets a champagne top-bar + champagne ghost numeral.
+> Supporting CTA note: *"We start with a focused whiteboard conversation to understand where growth still depends on the founder."*
+
+**Growth Diagnostic™ is the paid entry point.** Frame as: fixed fee · 3 weeks · board-ready
 Crescivo Scale System blueprint · diagnostic before prescription · maps where growth is still
 founder-dependent and the constraints, dependencies and opportunities inside the current commercial motion.
 
@@ -380,6 +400,8 @@ when regenerating.
 - Mobile accordion plus/minus indicator spacing corrected (inset from right edge).
 - Founder/operator references corrected to **three** co-founders (Sam Restifo, Guy Pozniak, Jason Serda).
 - Contact section refactored to a 2-column premium conversion layout (next candidate for further polish).
+- Outcomes reframed as a single **Proof Pattern** case-study block (story panel + one proof panel with `$0 → $4M ARR` dominant and 3 compact secondary metrics). Removed the duplicated metric overlay — `MetricsBand` is now a purely atmospheric image band.
+- Diagnostic section reframed as a **Diagnostic / Engagement Framework**: opens with "Before we prescribe the work, we map the system." and a three-step card row — **Whiteboard Session → Growth Diagnostic → Embedded Execution** — before the Growth Diagnostic™ detail. Whiteboard Session is an alignment/scoping step (not a separate offer, page or nav item; label is "Whiteboard Session", not "workshop"). Growth Diagnostic remains the paid entry point and primary CTA ("Book a Growth Diagnostic").
 - Figma/PPTX workflow explored but **put on hold** (Figma felt too complex for urgent client packs).
 - **PowerPoint/SVG workflow is preferred** for urgent client proposals.
 
