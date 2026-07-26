@@ -24,38 +24,13 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .logoImg {
-  width: 48px;
-  height: 48px;
-}
-
-.wordmark {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.wordmarkName {
-  font-family: var(--font-serif);
-  font-size: 20px;
-  letter-spacing: 0.05em;
-  color: var(--ivory);
-  font-weight: 400;
-  line-height: 1;
-}
-
-.c { color: var(--champ-l); }
-
-.wordmarkSub {
-  font-size: 8px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: rgba(200, 169, 110, 0.6);
-  font-family: var(--font-sans);
-  font-weight: 300;
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.55));
 }
 
 /* ── Desktop links ── */
@@ -140,8 +115,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 960px) {
-  .logoImg { width: 42px; height: 42px; }
-  .wordmarkName { font-size: 18px; }
+  .logoImg { height: 28px; }
   .links { display: none; }
   .burger { display: flex; }
 }

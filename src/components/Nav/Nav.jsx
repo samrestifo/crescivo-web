@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import styles from './Nav.module.css'
+import logo from '../../assets/crescivo-logo-reversed.png'
 
 const LINKS = [
   { href: '/#services',   label: 'Crescivo Scale System' },
@@ -7,17 +8,6 @@ const LINKS = [
   { href: '/#results',    label: 'Outcomes'             },
   { href: '/#about-team', label: 'Operators'            },
 ]
-
-function Wordmark() {
-  return (
-    <div className={styles.wordmark}>
-      <span className={styles.wordmarkName}>
-        <span className={styles.c}>C</span>RESCIVO
-      </span>
-      <span className={styles.wordmarkSub}>Crescivo Scale System</span>
-    </div>
-  )
-}
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -40,14 +30,11 @@ export default function Nav() {
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
         <a href="/#top" className={styles.logo} aria-label="Crescivo home">
           <img
-            src="/images/crescivo-logo.png"
-            alt="Crescivo"
+            src={logo}
+            alt="Crescivo — Scale Beyond the Founder"
             className={styles.logoImg}
-            width={48}
-            height={48}
             loading="eager"
           />
-          <Wordmark />
         </a>
 
         <ul className={styles.links}>
