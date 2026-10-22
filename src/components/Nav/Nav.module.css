@@ -74,43 +74,91 @@
   z-index: 400;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  background: rgba(10, 15, 24, 0.97);
+  padding: 22px 24px 36px;
+  background: var(--ink);
   transform: translateX(100%);
-  transition: transform 0.35s ease;
+  visibility: hidden;
+  transition: transform 0.35s ease, visibility 0s linear 0.35s;
+}
+.drawer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--champ), transparent);
 }
 .drawerOpen {
   transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.35s ease;
 }
-
-.drawerLinks {
-  list-style: none;
+.drawerTop {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 32px;
+  justify-content: space-between;
+  height: 48px;
 }
-.drawerLinks a {
-  font-family: var(--font-serif);
-  font-size: 32px;
-  color: var(--ivory);
-  letter-spacing: 0.03em;
-  transition: color var(--t-fast);
-}
-.drawerLinks a:hover { color: var(--champ-l); }
-
+.drawerLogo { height: 28px; width: auto; }
 .drawerClose {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  font-size: 28px;
-  color: var(--muted);
+  position: relative;
+  width: 36px;
+  height: 36px;
   background: none;
   border: none;
   cursor: pointer;
-  line-height: 1;
+}
+.drawerClose span {
+  position: absolute;
+  left: 8px; right: 8px;
+  top: 50%;
+  height: 1px;
+  background: var(--ivory);
+}
+.drawerClose span:first-child { transform: rotate(45deg); }
+.drawerClose span:last-child  { transform: rotate(-45deg); }
+
+.drawerLinks {
+  list-style: none;
+  margin: 56px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--bs);
+}
+.drawerLinks li { border-bottom: 1px solid var(--bs); }
+.drawerLinks a {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 22px 0;
+  font-family: var(--font-serif);
+  font-size: 26px;
+  color: var(--ivory);
+  transition: color var(--t-fast);
+}
+.drawerLinks a:hover { color: var(--champ-l); }
+.drawerNum {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--champ);
+  min-width: 24px;
+}
+.drawerFoot { margin-top: auto; }
+.drawerCta {
+  display: block;
+  text-align: center;
+  padding: 17px 20px;
+  background: var(--champ);
+  color: var(--ink);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.drawerNote {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
 }
 
 /* ── Responsive ── */

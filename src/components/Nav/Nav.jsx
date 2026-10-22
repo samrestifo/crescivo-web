@@ -3,7 +3,7 @@ import styles from './Nav.module.css'
 import logo from '../../assets/crescivo-logo-reversed.png'
 
 const LINKS = [
-  { href: '/#services',   label: 'Crescivo Scale System' },
+  { href: '/#services',   label: 'Crescivo Scale System', short: 'Scale System' },
   { href: '/#diagnostic', label: 'How we work'          },
   { href: '/#results',    label: 'Clients'              },
   { href: '/#about-team', label: 'Operators'            },
@@ -54,22 +54,37 @@ export default function Nav() {
         </button>
       </nav>
 
-      <div className={`${styles.drawer} ${menuOpen ? styles.drawerOpen : ''}`}>
-        <button
-          type="button"
-          className={styles.drawerClose}
-          aria-label="Close menu"
-          onClick={() => setMenuOpen(false)}
-        >
-          ×
-        </button>
+      <div
+        className={`${styles.drawer} ${menuOpen ? styles.drawerOpen : ''}`}
+        aria-hidden={!menuOpen}
+      >
+        <div className={styles.drawerTop}>
+          <img src={logo} alt="Crescivo" className={styles.drawerLogo} />
+          <button
+            type="button"
+            className={styles.drawerClose}
+            aria-label="Close menu"
+            onClick={() => setMenuOpen(false)}
+          >
+            <span /><span />
+          </button>
+        </div>
         <ul className={styles.drawerLinks}>
-          {LINKS.map(({ href, label }) => (
+          {LINKS.map(({ href, label, short }, i) => (
             <li key={href}>
-              <a href={href} onClick={() => setMenuOpen(false)}>{label}</a>
+              <a href={href} onClick={() => setMenuOpen(false)}>
+                <span className={styles.drawerNum}>{String(i + 1).padStart(2, '0')}</span>
+                <span>{short || label}</span>
+              </a>
             </li>
           ))}
         </ul>
+        <div className={styles.drawerFoot}>
+          <a href="/#contact" className={styles.drawerCta} onClick={() => setMenuOpen(false)}>
+            Book a Whiteboard Session
+          </a>
+          <p className={styles.drawerNote}>Ninety minutes with the three of us. No obligation.</p>
+        </div>
       </div>
     </>
   )
