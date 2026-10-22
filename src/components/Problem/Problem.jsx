@@ -3,8 +3,8 @@ import styles from './Problem.module.css'
 const PROBLEMS = [
   { n:'01', head:"The founder can't be in every deal forever.", body:"Early growth is founder-led by necessity. But when every major opportunity still needs the founder, growth becomes constrained by capacity rather than market demand." },
   { n:'02', head:"More people won't fix a missing system.", body:"Hiring sales, marketing or partnerships too early only adds motion without architecture. We build the operating system before scaling the headcount." },
-  { n:'03', head:"ICP drift kills momentum.", body:"Scale-ups often expand too broadly after early success. We sharpen where you win, why you win and how to repeat it." },
-  { n:'04', head:"Leverage sits untapped in the ecosystem.", body:"Partners, alliances and strategic relationships can multiply reach — but only when there is a clear motion, governance and commercial reason to engage." },
+  { n:'03', head:"ICP drift kills momentum.", body:"Scaleups often expand too broadly after early success. We sharpen where you win, why you win and how to repeat it." },
+  { n:'04', head:"Leverage sits untapped in the ecosystem.", body:"Partners, alliances and strategic relationships can multiply reach, but only with a clear motion, governance and a commercial reason to engage." },
 ]
 
 export default function Problem() {
@@ -13,11 +13,11 @@ export default function Problem() {
       <div className="sec-inner">
         <div className="eyebrow">The Founder Ceiling</div>
         <h2 className="sec-h2">
-          Product-market fit is proven.<br />
-          <em>Founder-led growth is the ceiling.</em>
+          Product market fit is proven.<br />
+          <em>Founder led growth is now the ceiling.</em>
         </h2>
         <p className="sec-desc">
-          Most scale-ups don't stall because the product stops working. They stall because growth still depends on the founder — their relationships, their instinct, their approvals and their presence in every important deal.
+          Scaleups rarely stall because the product stops working. Growth stalls when it still runs through the founder's relationships, instinct and approvals, and every important deal needs them in the room.
         </p>
         <div className={`${styles.grid} reveal`}>
           {PROBLEMS.map(({ n, head, body }) => (

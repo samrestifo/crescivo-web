@@ -3,12 +3,12 @@ import styles from './Cadenza.module.css'
 
 const EXECUTION_ITEMS = [
   {
-    title: 'Embedded execution, not advisory deliverables',
-    body: 'We work inside the operating rhythm of the business — turning commercial priorities into weekly action, not static recommendations.',
+    title: 'Working inside the business',
+    body: 'We work inside the operating rhythm of the business and turn commercial priorities into weekly action, with an owner for every number.',
   },
   {
     title: 'Weekly cadence with your leadership team',
-    body: 'We create the leadership rhythm for pipeline, priorities, decisions and accountability so growth becomes managed, not improvised.',
+    body: 'We create the leadership rhythm for pipeline, priorities, decisions and accountability so growth is managed week to week.',
   },
   {
     title: 'Board-ready growth visibility',
@@ -19,8 +19,8 @@ const EXECUTION_ITEMS = [
     body: 'We install the governance required to scale sales, GTM leadership and ecosystem execution without everything reverting to the founder.',
   },
   {
-    title: 'Designed to create founder autonomy',
-    body: 'The goal is not long-term dependency on Crescivo. The goal is a commercial system that lets the company scale beyond the founder.',
+    title: 'Designed to hand over',
+    body: 'Success is a commercial system your team runs without us, so the company can scale beyond the founder. A Scale Review at each stage decides whether we extend or exit.',
   },
 ]
 
@@ -36,7 +36,7 @@ export default function Cadenza() {
           <em>Now the business needs to scale beyond the founder.</em>
         </blockquote>
         <p className={styles.body}>
-          Crescivo embeds alongside the leadership team to turn the Crescivo Scale System into operating rhythm. We work inside the business — building the cadence, systems and capability required for repeatable growth.
+          Crescivo embeds alongside the leadership team to turn the Crescivo Scale System into operating rhythm. We work inside the business, building the cadence, systems and capability required for repeatable growth.
         </p>
 
         <div className={styles.accordion}>

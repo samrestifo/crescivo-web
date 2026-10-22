@@ -3,15 +3,27 @@ import styles from './Diagnostic.module.css'
 const STEPS = [
   {
     n: '01', title: 'Whiteboard Session',
-    body: 'Align the outcome, current reality, founder dependency and guardrails so the work is visible before scope is agreed.',
+    body: 'Ninety minutes with the three of us. We align on the outcome, the commercial picture and where growth still depends on the founder.',
   },
   {
-    n: '02', title: 'Growth Diagnostic', tag: 'Primary engagement',
-    body: 'Validate the constraints across the Crescivo Scale System and convert them into a board-ready 90-Day Scale Blueprint.',
+    n: '02', title: 'Crescivo Scale Brief',
+    body: 'One page. What we heard, what we would do and what it costs, so the scope is agreed before the work starts.',
   },
   {
-    n: '03', title: 'Embedded Execution',
-    body: 'Install the leadership rhythm, operating cadence and commercial system required for repeatable enterprise growth.',
+    n: '03', title: 'Growth Diagnostic', tag: 'Primary engagement',
+    body: 'Six weeks of evidence across the Crescivo Scale System, ending in a Commercial Blueprint and a board ready ninety day plan.',
+  },
+  {
+    n: '04', title: 'Embedded Execution',
+    body: 'We run the plan with your team, with a weekly leadership rhythm and an owner for every number.',
+  },
+  {
+    n: '05', title: 'Scale Review',
+    body: 'A monthly review against the scorecard, and a formal review at the end of each stage.',
+  },
+  {
+    n: '06', title: 'Extend or exit',
+    body: 'We decide together whether to extend or hand over. The aim is a system your team runs without us.',
   },
 ]
 
@@ -20,7 +32,7 @@ const DELIVERABLES = [
   'Positioning & Messaging Audit','GTM Motion Review','Sales Process Review',
   'Pipeline Health Score','Forecast Confidence Review','Partner Ecosystem Map',
   'Leadership Cadence Review','Team Capability Assessment','KPI Framework Design',
-  '90-Day Scale Blueprint',
+  'Commercial Blueprint and 90 day plan',
 ]
 
 export default function Diagnostic() {
@@ -28,10 +40,10 @@ export default function Diagnostic() {
     <section className="sec-alt" id="diagnostic">
       <div className="sec-inner">
         <div className={`${styles.intro} reveal`}>
-          <div className="eyebrow">The Engagement Framework</div>
-          <h2 className={`sec-h2 ${styles.head}`}>Before we prescribe the work,<br /><em>we map the system.</em></h2>
+          <div className="eyebrow">How we work</div>
+          <h2 className={`sec-h2 ${styles.head}`}>Every engagement runs<br /><em>in the same order.</em></h2>
           <p className="sec-desc" style={{marginBottom:0}}>
-            Every founder-led scale-up has a different constraint. The first step is a focused whiteboard conversation to align the outcome, current reality, founder dependency and guardrails. From there, the Growth Diagnostic validates the system and turns it into a board-ready blueprint.
+            It starts with ninety minutes at a whiteboard and a one page Scale Brief. The Growth Diagnostic follows the brief, and embedded execution follows the blueprint. A Scale Review at each stage decides what happens next.
           </p>
         </div>
 
@@ -48,12 +60,12 @@ export default function Diagnostic() {
 
         <div className={styles.wrap}>
           <div className="reveal">
-            <div className="eyebrow">The Entry Point</div>
-            <h3 className={styles.dHead}>The Growth <em>Diagnostic™</em></h3>
-            <div className={styles.feeLabel}>Fixed fee · 3 weeks</div>
-            <a href="#contact" className="btn-primary">Book a Growth Diagnostic</a>
+            <div className="eyebrow">The primary engagement</div>
+            <h3 className={styles.dHead}>The Growth <em>Diagnostic</em></h3>
+            <div className={styles.feeLabel}>Fixed fee · Six weeks</div>
+            <a href="#contact" className="btn-primary">Book a Whiteboard Session</a>
             <p className={styles.ctaNote}>
-              We start with a focused whiteboard conversation to understand where growth still depends on the founder.
+              Every Diagnostic starts with a Whiteboard Session and a Scale Brief, so you see the scope and the cost before it begins.
             </p>
           </div>
           <div className={`${styles.deliverables} reveal reveal-d1`}>

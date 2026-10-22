@@ -4,8 +4,8 @@ import logo from '../../assets/crescivo-logo-reversed.png'
 
 const LINKS = [
   { href: '/#services',   label: 'Crescivo Scale System' },
-  { href: '/#diagnostic', label: 'Diagnostic'           },
-  { href: '/#results',    label: 'Outcomes'             },
+  { href: '/#diagnostic', label: 'How we work'          },
+  { href: '/#results',    label: 'Clients'              },
   { href: '/#about-team', label: 'Operators'            },
 ]
 
@@ -31,7 +31,7 @@ export default function Nav() {
         <a href="/#top" className={styles.logo} aria-label="Crescivo home">
           <img
             src={logo}
-            alt="Crescivo — Scale Beyond the Founder"
+            alt="Crescivo. Scale Beyond the Founder"
             className={styles.logoImg}
             loading="eager"
           />

@@ -29,9 +29,9 @@ export default function Services() {
       <div className={styles.inner}>
         <div className={styles.head}>
           <div className="eyebrow">Crescivo Scale System</div>
-          <h2 className="sec-h2">One scale system.<br /><em>Four growth levers.</em></h2>
+          <h2 className="sec-h2">One operating system.<br /><em>Four growth levers.</em></h2>
           <p className={styles.intro}>
-            The Crescivo Scale System helps founder-led scale-ups move from founder dependency to repeatable enterprise growth across four connected levers.
+            The Crescivo Scale System helps founder led scaleups move from founder dependency to repeatable enterprise growth across four connected levers.
           </p>
         </div>
         <div className={styles.grid}>

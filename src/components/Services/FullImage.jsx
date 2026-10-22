@@ -12,9 +12,9 @@ export default function FullImage() {
       <div className={styles.overlay} />
       <div className={styles.text}>
         <blockquote className={styles.quote}>
-          "Growth is the output.<br /><em>The system is the input."</em>
+          We work across the ecosystems our clients sell into.<br /><em>Microsoft, AWS, Google Cloud, Cisco, Salesforce and ServiceNow.</em>
         </blockquote>
-        <cite className={styles.attr}>Crescivo — Scale Beyond the Founder.</cite>
+        <cite className={styles.attr}>Crescivo. Scale Beyond the Founder.</cite>
       </div>
     </div>
   )

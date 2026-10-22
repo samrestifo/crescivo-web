@@ -16,13 +16,13 @@ export default function ImageSplit() {
       <div className="txt-panel txt-panel-slate">
         <div className="eyebrow" style={{color:'var(--teal-l)'}}>What We Build</div>
         <h2 className="sec-h2" style={{fontSize:'clamp(22px,2.8vw,38px)',marginBottom:18}}>
-          The commercial architecture your scale-up is missing.
+          The commercial architecture your scaleup is missing.
         </h2>
         <p style={{fontSize:14,color:'var(--muted)',lineHeight:1.85,marginBottom:24}}>
           Crescivo sits between the founder and the market. We design the commercial architecture, activate the operating cadence and build the ecosystem required for repeatable enterprise growth.
         </p>
         <p style={{fontSize:14,color:'var(--muted)',lineHeight:1.85,marginBottom:36}}>
-          We don't replace founders. We multiply them — then build the system that lets the company grow without depending on them.
+          We work alongside the founder and build the system, so the company can grow without them in every deal.
         </p>
         <a href="#services" className="btn-primary">Explore the Crescivo Scale System</a>
       </div>

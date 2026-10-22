@@ -70,7 +70,7 @@ const CAPS = [
 export default function Hero() {
   const bgRef = useRef(null)
 
-  // Parallax — desktop only. Attach the scroll listener solely when the
+  // Parallax, desktop only. Attach the scroll listener solely when the
   // viewport is desktop-width, so mobile keeps the static framed crop.
   useEffect(() => {
     if (!window.matchMedia('(min-width: 768px)').matches) return
@@ -87,7 +87,7 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      {/* Background — WebP, desktop/mobile swap handled in CSS */}
+      {/* Background: WebP, desktop/mobile swap handled in CSS */}
       <div
         ref={bgRef}
         className={styles.bg}
@@ -112,10 +112,10 @@ export default function Hero() {
         </h1>
         <div className={styles.divider} />
         <p className={styles.sub}>
-          The Crescivo Scale System for B2B scale-ups with proven product-market fit.
+          The Crescivo Scale System for B2B scaleups with proven product market fit.
         </p>
         <p className={styles.sub}>
-          Every founder-led scale-up hits the same ceiling: growth still depends on the founder. Crescivo builds the architecture, leadership, operations and ecosystem to turn founder-led momentum into repeatable enterprise growth.
+          Every founder led scaleup reaches the point where growth still runs through the founder. Crescivo builds the architecture, leadership, operations and ecosystem that turn that momentum into repeatable enterprise growth.
         </p>
       </div>
 
@@ -155,11 +155,11 @@ export default function Hero() {
             <span className={styles.accent}>Ecosystem</span>
           </div>
           <div className={styles.actions}>
-            <a href="#diagnostic" className="btn-primary">
-              Book a Growth Diagnostic
+            <a href="#contact" className="btn-primary">
+              Book a Whiteboard Session
             </a>
-            <a href="#services" className="btn-ghost">
-              Explore the Method
+            <a href="#diagnostic" className="btn-ghost">
+              How we work
             </a>
           </div>
         </div>
@@ -176,10 +176,10 @@ export default function Hero() {
             <span className={styles.accent}>Ecosystem</span>
           </div>
           <a href="#contact" className={styles.mobileCtaBtn}>
-            Book a Growth Diagnostic →
+            Book a Whiteboard Session →
           </a>
           <p className={styles.mobileCtaMicro}>
-            30-minute executive discussion. No obligation.
+            Ninety minutes with the three of us. No obligation.
           </p>
         </div>
       </div>

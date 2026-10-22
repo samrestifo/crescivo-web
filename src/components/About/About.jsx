@@ -1,9 +1,9 @@
 import styles from './About.module.css'
 
 const CREDS = [
-  'Deep B2B scale-up, enterprise sales and GTM experience across AU/NZ and APAC',
+  'Deep B2B scaleup, enterprise sales and GTM experience across AU/NZ and APAC',
   'Commercial architecture across sales, partnerships, ecosystem and operating cadence',
-  'Operator-led execution — embedded with leadership, not advising from a distance',
+  'Operator led execution, embedded with your leadership team',
   'Commercial alignment through retained, success-based and selective equity structures',
 ]
 
@@ -26,10 +26,10 @@ export default function About() {
           Operators who've built it,<br />broken it and <em>scaled it</em>.
         </div>
         <p className={styles.body}>
-          Crescivo is led by Sam Restifo, Guy Pozniak and Jason Serda — three co-founder/operators who have built and sold significant businesses, led enterprise sales and GTM functions, activated partner ecosystems across Australia, APAC and international markets, and bring extensive executive network access.
+          Crescivo is led by Sam Restifo, Guy Pozniak and Jason Serda, three co-founders and operators who have built and sold significant businesses, led enterprise sales and GTM functions, activated partner ecosystems across Australia, APAC and international markets, and bring extensive executive network access.
         </p>
         <p className={styles.body}>
-          We work with B2B scale-ups that have proven product-market fit but are still too dependent on founder-led growth. Our role is to apply the Crescivo Scale System — across architecture, leadership, operations and ecosystem — to help the business scale beyond the founder.
+          We work with B2B scaleups that have proven product market fit but are still too dependent on founder led growth. We apply the Crescivo Scale System across architecture, leadership, operations and ecosystem to help the business scale beyond the founder.
         </p>
         <div className={styles.creds}>
           {CREDS.map(c => (
@@ -40,7 +40,7 @@ export default function About() {
           ))}
         </div>
         <div className={styles.pullQuote}>
-          <p>"We don't replace founders. We multiply them."</p>
+          <p>"One cadence. One set of comms. One point of contact, and a team that only wins when you do."</p>
           <cite>Sam Restifo, Guy Pozniak & Jason Serda · Crescivo</cite>
         </div>
       </div>
