@@ -13,7 +13,7 @@
   inset: 0;
   background-image: url('/images/hero-stairs-desktop.webp');
   background-size: cover;
-  background-position: center 20%;
+  background-position: left 40%;   /* figure sits centre of the image; anchoring left puts him on the right of the screen */
   will-change: transform;
 }
 
@@ -39,10 +39,10 @@
     height: 100%;
     background-image: url('/images/hero-stairs-mobile.webp');
     background-size: cover;
-    background-position: center 58%;
+    background-position: center top;
     background-repeat: no-repeat;
     opacity: 0.62;                /* slightly transparent / dimmed */
-    transform: translateY(-30%) !important;   /* shift image up; also disables parallax */
+    transform: none !important;   /* figure sits in the upper third of the image; also disables parallax */
     z-index: 0;
   }
 }
