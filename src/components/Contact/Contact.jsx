@@ -29,7 +29,7 @@ export default function Contact() {
       `Revenue stage: ${form.arr}`,
       `Primary constraint: ${form.challenge}`,
     ].join('\n')
-    window.location.href = `mailto:sam@crescivo.partners?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto:info@crescivo.partners?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     setSent(true)
   }
 
@@ -54,7 +54,7 @@ export default function Contact() {
         <div className={styles.formPanel}>
           {sent ? (
             <div className={styles.success}>
-              Thanks. Your email app should open with your enquiry ready to send. If it doesn't, write to us at sam@crescivo.partners.
+              Thanks. Your email app should open with your enquiry ready to send. If it doesn't, write to us at info@crescivo.partners.
             </div>
           ) : (
             <form onSubmit={handleSubmit} className={styles.form}>

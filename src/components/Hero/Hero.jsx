@@ -92,7 +92,7 @@ export default function Hero() {
         ref={bgRef}
         className={styles.bg}
         role="img"
-        aria-label="Figure standing on a mountain summit surveying an interconnected landscape at sunrise"
+        aria-label="A lone figure climbing wide stone steps between concrete walls toward warm light"
       />
 
       {/* Overlays */}
