@@ -1,6 +1,13 @@
 import styles from './FullImage.module.css'
 
-const ECOSYSTEMS = ['Microsoft', 'AWS', 'Google Cloud', 'Cisco', 'Salesforce', 'ServiceNow']
+const ECOSYSTEMS = [
+  { name: 'Microsoft',  file: 'microsoft.svg'  },
+  { name: 'AWS',        file: 'aws.svg'        },
+  { name: 'Google',     file: 'google.svg'     },
+  { name: 'Cisco',      file: 'cisco.svg'      },
+  { name: 'Salesforce', file: 'salesforce.svg' },
+  { name: 'ServiceNow', file: 'servicenow.svg' },
+]
 
 export default function FullImage() {
   return (
@@ -8,6 +15,7 @@ export default function FullImage() {
       <img
         src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80&fit=crop&crop=center"
         alt=""
+        className={styles.bg}
         loading="lazy"
         width={1600}
         height={440}
@@ -19,7 +27,11 @@ export default function FullImage() {
           We work across the ecosystems <em>our clients sell into.</em>
         </p>
         <ul className={styles.list}>
-          {ECOSYSTEMS.map(e => <li key={e} className={styles.item}>{e}</li>)}
+          {ECOSYSTEMS.map(({ name, file }) => (
+            <li key={name} className={styles.item}>
+              <img src={`/images/ecosystems/${file}`} alt={name} loading="lazy" className={styles.logo} />
+            </li>
+          ))}
         </ul>
       </div>
     </div>
